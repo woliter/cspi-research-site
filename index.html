@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="cspi-system static-site (academic-version)">
+<meta name="robots" content="index, follow">
+<title>首页 | CSPI Research</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <h1><a href="/" style="color:inherit;text-decoration:none">CSPI · 中国稳定币渗透指数</a></h1>
+    <nav>
+      <a href="/">综合 + 分项</a>
+      <a href="/flow/">资金流向</a>
+      <a href="/methodology.html">方法学</a>
+      <a href="/about.html">关于</a>
+      <a href="/data.json">data.json</a>
+    </nav>
+  </div>
+</header>
+<div class="container">
+
+<p class="disclaimer">
+  本页为 <strong>学术发布版</strong>。所有数值已经过：1) 较内部数据滞后 7 天；
+  2) 加 ±5% 高斯乘法噪声；3) 离散化为 5 分位标签（仅显示 Bin k/5）。
+  精确 z 值与原始数据仅在内部版报告中提供。
+</p>
+
+<div class="headline">
+  <div>
+    <div class="label">CSPI 综合（pillar 平均 z）</div>
+    <div>
+      <span class="bin bin5" style="font-size:22px;padding:6px 18px">5 / 5（最高）</span>
+    </div>
+    <div class="meta">方向 <span class="arrow up">▲ 上行</span> · 快照 2026-05-05</div>
+  </div>
+  <img class="composite-spark" src="/charts/cspi_composite.png" alt="CSPI composite chart">
+</div>
+
+<h2>28 个分项 (Phase-2 anchor-driven + macro)</h2>
+<div class="grid">
+
+<a class="card" href="/pillars/RMBPressure.html">
+  <span class="pillar-name">人民币离岸压力</span>
+  <span class="pillar-key">RMBPressure</span>
+  <span class="bin bin3">3 / 5（中位）</span>
+  <div class="row">
+    <span><span class="arrow up">▲ 上行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/USYieldCurve.html">
+  <span class="pillar-name">美债收益率曲线</span>
+  <span class="pillar-key">USYieldCurve</span>
+  <span class="bin bin4">4 / 5</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/GlobalUSDStress_simple.html">
+  <span class="pillar-name">全球美元流动性压力</span>
+  <span class="pillar-key">GlobalUSDStress_simple</span>
+  <span class="bin bin3">3 / 5（中位）</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/OilStress.html">
+  <span class="pillar-name">油价压力</span>
+  <span class="pillar-key">OilStress</span>
+  <span class="bin bin5">5 / 5（最高）</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-05-04</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/GoldPremium.html">
+  <span class="pillar-name">黄金溢价</span>
+  <span class="pillar-key">GoldPremium</span>
+  <span class="bin bin5">5 / 5（最高）</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/OffshoreLiquidity.html">
+  <span class="pillar-name">离岸人民币流动性</span>
+  <span class="pillar-key">OffshoreLiquidity</span>
+  <span class="bin bin1">1 / 5（最低）</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/PbcLiquidityOps.html">
+  <span class="pillar-name">央行流动性操作</span>
+  <span class="pillar-key">PbcLiquidityOps</span>
+  <span class="bin bin5">5 / 5（最高）</span>
+  <div class="row">
+    <span><span class="arrow up">▲ 上行</span></span>
+    <span>2026-04-30</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/TetherIssuanceFlows.html">
+  <span class="pillar-name">Tether 发行净流</span>
+  <span class="pillar-key">TetherIssuanceFlows</span>
+  <span class="bin bin3">3 / 5（中位）</span>
+  <div class="row">
+    <span><span class="arrow up">▲ 上行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CipBasisFull.html">
+  <span class="pillar-name">CIP 基差（完整）</span>
+  <span class="pillar-key">CipBasisFull</span>
+  <span class="bin bin4">4 / 5</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>monthly</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CipBasisProxy.html">
+  <span class="pillar-name">CIP 基差（代理）</span>
+  <span class="pillar-key">CipBasisProxy</span>
+  <span class="bin bin2">2 / 5</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>monthly</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/SouthboundFlow.html">
+  <span class="pillar-name">南向通净流</span>
+  <span class="pillar-key">SouthboundFlow</span>
+  <span class="bin bin5">5 / 5（最高）</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-04-30</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/StockConnectFlow.html">
+  <span class="pillar-name">沪深港通净流</span>
+  <span class="pillar-key">StockConnectFlow</span>
+  <span class="bin none">—</span>
+  <div class="row">
+    <span><span class="arrow flat">—</span></span>
+    <span>—</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnShareCombined.html">
+  <span class="pillar-name">在华份额合成</span>
+  <span class="pillar-key">CnShareCombined</span>
+  <span class="bin bin4">4 / 5</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/SafeForexBalance.html">
+  <span class="pillar-name">外管局结售汇差</span>
+  <span class="pillar-key">SafeForexBalance</span>
+  <span class="bin bin1">1 / 5（最低）</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-03-31</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>monthly</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/ForexSettlement.html">
+  <span class="pillar-name">结售汇综合差</span>
+  <span class="pillar-key">ForexSettlement</span>
+  <span class="bin bin4">4 / 5</span>
+  <div class="row">
+    <span><span class="arrow down">▼ 下行</span></span>
+    <span>2026-03-31</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>monthly</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnhDepositsHk.html">
+  <span class="pillar-name">港 CNH 存款</span>
+  <span class="pillar-key">CnhDepositsHk</span>
+  <span class="bin bin1">1 / 5（最低）</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-03-31</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>monthly</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/BopFlows.html">
+  <span class="pillar-name">国际收支流</span>
+  <span class="pillar-key">BopFlows</span>
+  <span class="bin bin4">4 / 5</span>
+  <div class="row">
+    <span><span class="arrow flat">—</span></span>
+    <span>2025-12-31</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>quarterly</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnMiningPoolStress.html">
+  <span class="pillar-name">中国矿池压力（事件）</span>
+  <span class="pillar-key">CnMiningPoolStress</span>
+  <span class="bin bin4">4 / 5</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnMiningPoolGrossVolume.html">
+  <span class="pillar-name">中国矿池总流量（事件）</span>
+  <span class="pillar-key">CnMiningPoolGrossVolume</span>
+  <span class="bin bin3">3 / 5（中位）</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnExchangeLegacyOutflow.html">
+  <span class="pillar-name">在华历史交易所流出</span>
+  <span class="pillar-key">CnExchangeLegacyOutflow</span>
+  <span class="bin bin2">2 / 5</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-04-21</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnExchangeLegacyGrossVolume.html">
+  <span class="pillar-name">在华历史交易所总流量</span>
+  <span class="pillar-key">CnExchangeLegacyGrossVolume</span>
+  <span class="bin bin4">4 / 5</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-04-21</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnExchangeLegacyDormancy.html">
+  <span class="pillar-name">在华历史交易所休眠</span>
+  <span class="pillar-key">CnExchangeLegacyDormancy</span>
+  <span class="bin bin1">1 / 5（最低）</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-04-15</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnMiningPersistencePost94.html">
+  <span class="pillar-name">94 后矿池存续</span>
+  <span class="pillar-key">CnMiningPersistencePost94</span>
+  <span class="bin bin5">5 / 5（最高）</span>
+  <div class="row">
+    <span><span class="arrow up">▲ 上行</span></span>
+    <span>2026-05-05</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnPropagationDailyFlow.html">
+  <span class="pillar-name">传播图日流</span>
+  <span class="pillar-key">CnPropagationDailyFlow</span>
+  <span class="bin bin5">5 / 5（最高）</span>
+  <div class="row">
+    <span><span class="arrow up">▲ 上行</span></span>
+    <span>2026-03-15</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/ChineseScoreWeightedTetherFlow.html">
+  <span class="pillar-name">中国分加权 Tether 流</span>
+  <span class="pillar-key">ChineseScoreWeightedTetherFlow</span>
+  <span class="bin bin1">1 / 5（最低）</span>
+  <div class="row">
+    <span><span class="arrow flat">— 持平</span></span>
+    <span>2026-05-04</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>event-driven</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnIcoHolderActivity.html">
+  <span class="pillar-name">中国系 ICO 持币活动</span>
+  <span class="pillar-key">CnIcoHolderActivity</span>
+  <span class="bin none">—</span>
+  <div class="row">
+    <span><span class="arrow flat">—</span></span>
+    <span>—</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>historical (closed window)</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnIcoTreasuryConcentration.html">
+  <span class="pillar-name">中国系 ICO 财库集中度</span>
+  <span class="pillar-key">CnIcoTreasuryConcentration</span>
+  <span class="bin none">—</span>
+  <div class="row">
+    <span><span class="arrow flat">—</span></span>
+    <span>—</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>historical (closed window)</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/AnnualBenchmark.html">
+  <span class="pillar-name">年度基准</span>
+  <span class="pillar-key">AnnualBenchmark</span>
+  <span class="bin bin1">1 / 5（最低）</span>
+  <div class="row">
+    <span><span class="arrow flat">—</span></span>
+    <span>2025-12-31</span>
+  </div>
+  <div class="row">
+    <span>更新节奏</span>
+    <span>annual benchmark</span>
+  </div>
+</a>
+
+</div>
+
+<footer>
+  <p>数据快照：2026-05-05（较内部数据滞后 7 天） ·
+    已按学术发布规约施加 ±5% 噪声 + 5 分位离散化（§12.6 三轨发布）</p>
+  <p>CSPI Research · 王任（华东政法大学）个人研究项目 ·
+    代码私有 · 数据为研究用途，不构成投资建议</p>
+</footer>
+</div>
+</body>
+</html>
