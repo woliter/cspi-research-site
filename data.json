@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-05-06",
-  "generated_at_utc": "2026-05-13T03:13:29Z",
+  "generated_at_utc": "2026-05-13T08:25:44Z",
   "methodology_version": "v1.6",
   "publication_track": "academic",
   "masking": {
@@ -113,15 +113,6 @@
       "has_data": true
     },
     {
-      "key": "StockConnectFlow",
-      "name_cn": "沪深港通净流",
-      "cadence": "daily",
-      "latest_date": null,
-      "latest_bin": null,
-      "direction": "—",
-      "has_data": false
-    },
-    {
       "key": "CnShareCombined",
       "name_cn": "在华份额合成",
       "cadence": "daily",
@@ -174,6 +165,15 @@
       "latest_bin": "Bin 1/5",
       "direction": "—",
       "has_data": true
+    },
+    {
+      "key": "StockConnectFlow",
+      "name_cn": "StockConnectFlow",
+      "cadence": "daily",
+      "latest_date": null,
+      "latest_bin": null,
+      "direction": "—",
+      "has_data": false
     },
     {
       "key": "CnAnchorAggregate",
