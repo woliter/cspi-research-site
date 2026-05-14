@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-05-07",
-  "generated_at_utc": "2026-05-14T00:01:40Z",
+  "generated_at_utc": "2026-05-14T02:50:22Z",
   "methodology_version": "v1.6",
   "publication_track": "academic",
   "masking": {
@@ -165,6 +165,15 @@
       "latest_bin": "Bin 1/5",
       "direction": "—",
       "has_data": true
+    },
+    {
+      "key": "CnUsKycBridgeOutflow",
+      "name_cn": "中美 KYC 桥净流出",
+      "cadence": "daily",
+      "latest_date": null,
+      "latest_bin": null,
+      "direction": "—",
+      "has_data": false
     },
     {
       "key": "StockConnectFlow",
