@@ -163,6 +163,62 @@ table.history tr:nth-child(even) td { background: #fafbfd; }
     margin-top: 16px;
 }
 
+/* Headline bridge section (Phase 4 — Cn<->US KYC bridge top-level card) */
+.headline-bridge {
+    background: #fff;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 28px 28px 22px;
+    margin-bottom: 28px;
+}
+.headline-bridge h2 { margin-top: 0; font-size: 20px; color: var(--accent); }
+.headline-bridge > .meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin: -6px 0 20px;
+}
+.bridge-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.bridge-card {
+    flex: 1;
+    min-width: 240px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+}
+.bridge-card .label {
+    font-size: 12px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+.bridge-card .bin {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+}
+.bridge-card .bin.bin1 { background: var(--bin1); }
+.bridge-card .bin.bin2 { background: var(--bin2); color: #1a1a1a; }
+.bridge-card .bin.bin3 { background: var(--bin3); color: #1a1a1a; }
+.bridge-card .bin.bin4 { background: var(--bin4); }
+.bridge-card .bin.bin5 { background: var(--bin5); }
+.bridge-card .bin.none { background: #ccc; color: #555; }
+.bridge-card .bridge-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+.bridge-card svg.sparkline { display: block; margin-top: 8px; }
+
 footer {
     margin-top: 60px;
     padding-top: 16px;
