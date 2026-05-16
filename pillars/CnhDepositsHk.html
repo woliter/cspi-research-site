@@ -12,7 +12,7 @@
 <body>
 <header class="site">
   <div class="inner">
-    <h1><a href="/" style="color:inherit;text-decoration:none">CSPI · 中国稳定币洗透指数</a></h1>
+    <h1><a href="/" style="color:inherit;text-decoration:none">CSPI · 中国稳定币渗透指数</a></h1>
     <nav>
       <a href="/">综合 + 分项</a>
       <a href="/flow/">资金流向</a>
@@ -24,10 +24,11 @@
 </header>
 <div class="container">
 
-<p><a href="/">← 返回综合页</a></p>
-<h2>港 CNH 存款
-  <small style="color:#888;font-weight:400">(CnhDepositsHk)</small>
+<p class="back-link"><a href="/">← 返回综合页</a></p>
+<h2 class="pillar-title">港 CNH 存款
+  <small class="pillar-title-key">(CnhDepositsHk)</small>
 </h2>
+<p class="pillar-desc">香港金管局口径的离岸人民币存款余额。存款大幅萎缩可能意味着资金离开 CNH 体系，转向稳定币或美元资产。</p>
 
 <div class="headline">
   <div>
@@ -44,18 +45,19 @@
 </div>
 
 <img class="pillar-chart" src="/charts/pillars/CnhDepositsHk.png" alt="CnhDepositsHk chart">
-<h3>近 6 个月（含 ±5% 噪声后的 z 値，仅供示意趋势）</h3><table class='history'><thead><tr><th>日期</th><th>5 分位</th><th>z (noised)</th></tr></thead><tbody><tr><td>2026-03-31</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.33</td></tr><tr><td>2026-02-28</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.42</td></tr><tr><td>2026-01-31</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.32</td></tr><tr><td>2025-12-31</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.16</td></tr><tr><td>2025-11-30</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.22</td></tr></tbody></table>
+<h3>近 6 个月（含 ±5% 噪声后的 z 値，仅供示意趋势）</h3><table class='history'><thead><tr><th>日期</th><th>5 分位</th><th>z (noised)</th></tr></thead><tbody><tr><td>2026-03-31</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.45</td></tr><tr><td>2026-02-28</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.42</td></tr><tr><td>2026-01-31</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.29</td></tr><tr><td>2025-12-31</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.12</td></tr><tr><td>2025-11-30</td><td><span class='bin bin1'>1 / 5（最低）</span></td><td style='text-align:right;font-family:monospace'>-1.29</td></tr></tbody></table>
 
-<p style="color:#888;font-size:13px;margin-top:24px">
-  注：z 値已加 ±5% 高斯噪声。分位标签基于该 pillar 在快照截止日及之前所有历史观测的 5 等分位点计算，
+<p class="note-small">
+  注：z 值已加 ±5% 高斯噪声。分位标签基于该 pillar 在快照截止日及之前所有历史观测的 5 等分位点计算，
   以保证分位边界稳定（不随单日新数据漂移）。
 </p>
 
 <footer>
-  <p>数据快照：2026-05-14（较内部数据滖后 0 天） ·
+  <p class="footer-notice">本平台输出仅用于学术研究与方法学展示，不构成对任何具体主体的监测、监管建议或投资建议。所有链上识别均以公开地址聚类与启发式为基础，以聚合统计指标为单位，不公开任何单一主体级别的判定。</p>
+  <p>数据快照：2026-05-09（较内部数据滞后 7 天） ·
     已按学术发布规约施加 ±5% 噪声 + 5 分位离散化（§12.6 三轨发布）</p>
-  <p>CSPI Research · 个人独立研究项目 ·
-    代码私有 · 数据为研究用途，不构成投资建议</p>
+  <p>CSPI Research · 独立学术研究项目 ·
+    代码私有 · 数据为研究用途，不构成投资、交易、监管或法律建议</p>
 </footer>
 </div>
 </body>

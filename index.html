@@ -12,7 +12,7 @@
 <body>
 <header class="site">
   <div class="inner">
-    <h1><a href="/" style="color:inherit;text-decoration:none">CSPI · 中国稳定币洗透指数</a></h1>
+    <h1><a href="/" style="color:inherit;text-decoration:none">CSPI · 中国稳定币渗透指数</a></h1>
     <nav>
       <a href="/">综合 + 分项</a>
       <a href="/flow/">资金流向</a>
@@ -24,324 +24,376 @@
 </header>
 <div class="container">
 
+<section class="composite-hero">
+  <div class="composite-hero-grid">
+    <div class="composite-hero-text">
+      <div class="composite-eyebrow">CSPI 综合指数 · pillar 平均 z</div>
+      <div class="composite-bin-wrap">
+        <span class="bin composite-bin bin3">3 / 5（中位）</span>
+      </div>
+      <div class="composite-meta">方向 <span class="arrow down">▼ 下行</span> · 快照 2026-05-09（滞后 7 天）</div>
+      <p class="composite-desc">CSPI（China Stablecoin Penetration Index）测度的不是抽象意义上的「跨境渗透」，而是由稳定币发行、离岸价差、锚点行为、跨境桥接与境内关联活动共同表征、与传统美元流动性外溢可区分的中国关联稳定币活动强度。构造上以全球供给、离岸价格、中国关联活动、跨境流向四类信息并行报告；在指数合成阶段对 VIX、DXY、加密市场总市值、TED 利差等做投影，对残差再做因子提取，以分离渗透特定信息与共同冲击。右图展示综合 z 分数的近期轨迹与关键事件窗口标注。</p>
+      <p class="validity-note"><strong>方法学边界：</strong>CSPI 的内容效度（content validity）：本指数关注「与传统美元流动性外溢可区分」的中国关联稳定币活动强度，采用四类信息并行 + 对照变量残差化的合成路径，不等同于全球加密市场风险情绪或广义美元流动性。</p>
+    </div>
+    <div class="composite-hero-chart">
+      <img class="composite-spark" src="/charts/cspi_composite.png" alt="CSPI 综合 z 分数走势">
+    </div>
+  </div>
+</section>
+
 <p class="disclaimer">
-  本页为 <strong>学术发布版</strong>。所有数値已经过：1) 较内部数据滖后 0 天；
+  本页为 <strong>学术发布版</strong>。所有数值已经过：1) 较内部数据滞后 7 天；
   2) 加 ±5% 高斯乘法噪声；3) 离散化为 5 分位标签（仅显示 Bin k/5）。
-  精确 z 値与原始数据仅在内部版报告中提供。
+  精确 z 值与原始数据仅在内部版报告中提供。
 </p>
 
-
-<div class="headline-bridge" title="Net flow of stablecoins, BTC, and ETH between Chinese-related addresses and US KYC exchanges (Coinbase / Kraken / Gemini)">
-  <h2>中美 KYC 桥资金流 · 最重要指标</h2>
-  <p class="meta">衡量中国相关地址 ↔ 美国 KYC 交易所（Coinbase / Kraken / Gemini）之间 USDT / USDC / BTC / ETH 净流 USD 等价</p>
-  <div class="bridge-cards">
-    <div class="bridge-card"><div class="label">净流出（中国 → 美国 KYC）</div><span class="bin bin1">1 / 5（最低）</span><div class="bridge-meta"><span class="arrow flat">— 持平</span> · 2026-05-14</div><svg class="sparkline" viewBox="0 0 260 48" width="260" height="48" xmlns="http://www.w3.org/2000/svg"><polyline points="4.0,43.7 67.0,43.8 130.0,37.2 193.0,4.0 256.0,44.0" fill="none" stroke="#d62728" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
-    <div class="bridge-card"><div class="label">流入（美国 KYC → 中国）</div><span class="bin none">—</span></div>
+<section class="pillars-section">
+  <div class="section-head">
+    <h2>分项指数 · 按四类信息分组</h2>
+    <p class="section-lead">CSPI 通过<strong>全球供给、离岸价格、中国关联活动、跨境流向</strong>四类信息并行报告；对照变量集仅作残差化使用，不进入 CSPI 主体。</p>
   </div>
-</div>
 
-<div class="headline">
-  <div>
-    <div class="label">CSPI 综合（pillar 平均 z）</div>
-    <div>
-      <span class="bin bin3"
-            style="font-size:22px;padding:6px 18px">3 / 5（中位）</span>
-    </div>
-    <div class="meta">方向 <span class="arrow down">▼ 下行</span> · 快照 2026-05-14</div>
+<section class="pillar-group" id="group-global_supply">
+  <div class="group-head">
+    <h3 class="group-title">一、全球供给
+      <span class="group-subtitle">Global Supply</span>
+    </h3>
+    <p class="group-lead">美元稳定币的源头产能、全球美元流动性与利率结构——CSPI 的供给侧背景。</p>
   </div>
-  <img class="composite-spark" src="/charts/cspi_composite.png" alt="CSPI composite chart">
-</div>
+  <div class="grid">
 
-<h2>28 个分项 (Phase-2 anchor-driven + macro)</h2>
-<div class="grid">
-
-<a class="card" href="/pillars/RMBPressure.html">
-  <span class="pillar-name">人民币离岸压力</span>
-  <span class="pillar-key">RMBPressure</span>
-  <span class="bin bin2">2 / 5</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-05-13</span>
+<a class="card" href="/pillars/TetherIssuanceFlows.html">
+  <div class="card-head">
+    <span class="pillar-name">Tether 发行净流</span>
+    <span class="bin bin4">4 / 5</span>
   </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/USYieldCurve.html">
-  <span class="pillar-name">美傘收益率曲线</span>
-  <span class="pillar-key">USYieldCurve</span>
-  <span class="bin bin4">4 / 5</span>
-  <div class="row">
-    <span><span class="arrow flat">— 持平</span></span>
-    <span>2026-05-12</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+  <span class="pillar-key">TetherIssuanceFlows</span>
+  <p class="card-desc">USDT 全网发行（增发减赎回）的净额。大额净发行常伴随亚洲场外与 OTC 通道需求扩张。</p>
+  <div class="card-foot">
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
   </div>
 </a>
 
 <a class="card" href="/pillars/GlobalUSDStress_simple.html">
-  <span class="pillar-name">全球美元流动性压力</span>
+  <div class="card-head">
+    <span class="pillar-name">全球美元流动性压力</span>
+    <span class="bin bin4">4 / 5</span>
+  </div>
   <span class="pillar-key">GlobalUSDStress_simple</span>
-  <span class="bin bin3">3 / 5（中位）</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-05-12</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+  <p class="card-desc">综合美元指数、TED 利差等观测全球美元紧绷程度。分位越高，美元越稀缺，新兴市场用稳定币囤美元的动机越强。</p>
+  <div class="card-foot">
+    <span><span class="arrow up">▲ 上行</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
   </div>
 </a>
 
-<a class="card" href="/pillars/OilStress.html">
-  <span class="pillar-name">油价压力</span>
-  <span class="pillar-key">OilStress</span>
-  <span class="bin bin5">5 / 5（最高）</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-05-04</span>
+<a class="card" href="/pillars/USYieldCurve.html">
+  <div class="card-head">
+    <span class="pillar-name">美债收益率曲线</span>
+    <span class="bin bin4">4 / 5</span>
   </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+  <span class="pillar-key">USYieldCurve</span>
+  <p class="card-desc">用 2s10s 等期限利差描述美债曲线形态。曲线越异常（深度倒挂或骤陡），美元流动性环境越扰动，影响 USDT 套利与跨境配置。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
   </div>
 </a>
 
-<a class="card" href="/pillars/GoldPremium.html">
-  <span class="pillar-name">黄金溢价</span>
-  <span class="pillar-key">GoldPremium</span>
-  <span class="bin bin5">5 / 5（最高）</span>
-  <div class="row">
-    <span><span class="arrow flat">— 持平</span></span>
-    <span>2026-05-12</span>
   </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+</section>
+
+<section class="pillar-group" id="group-offshore_price">
+  <div class="group-head">
+    <h3 class="group-title">二、离岸价格
+      <span class="group-subtitle">Offshore Price</span>
+    </h3>
+    <p class="group-lead">人民币离岸/在岸价差、美元离岸借贷成本与境内场外报价——稳定币跨境渗透的价格信号层。</p>
+  </div>
+  <div class="grid">
+
+<a class="card" href="/pillars/RMBPressure.html">
+  <div class="card-head">
+    <span class="pillar-name">人民币离岸压力</span>
+    <span class="bin bin3">3 / 5（中位）</span>
+  </div>
+  <span class="pillar-key">RMBPressure</span>
+  <p class="card-desc">刻画离岸人民币（CNH）相对在岸（CNY）的偏离与波动。分位越高，离岸贬值压力越大，非正规跨境支付与稳定币换汇通道的边际动机越强。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
   </div>
 </a>
 
 <a class="card" href="/pillars/OffshoreLiquidity.html">
-  <span class="pillar-name">离岸人民币流动性</span>
+  <div class="card-head">
+    <span class="pillar-name">离岸人民币流动性</span>
+    <span class="bin bin2">2 / 5</span>
+  </div>
   <span class="pillar-key">OffshoreLiquidity</span>
-  <span class="bin bin2">2 / 5</span>
-  <div class="row">
-    <span><span class="arrow flat">— 持平</span></span>
-    <span>2026-05-12</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/PbcLiquidityOps.html">
-  <span class="pillar-name">央行流动性操作</span>
-  <span class="pillar-key">PbcLiquidityOps</span>
-  <span class="bin bin2">2 / 5</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-05-13</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/TetherIssuanceFlows.html">
-  <span class="pillar-name">Tether 发行净流</span>
-  <span class="pillar-key">TetherIssuanceFlows</span>
-  <span class="bin bin4">4 / 5</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-05-08</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+  <p class="card-desc">用 CNH HIBOR 等指标观察香港人民币市场松紧。流动性收紧时跨境换汇成本上升，USDT/USDC 替代价值上升。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
   </div>
 </a>
 
 <a class="card" href="/pillars/CipBasisFull.html">
-  <span class="pillar-name">CIP 基差（完整）</span>
-  <span class="pillar-key">CipBasisFull</span>
-  <span class="bin bin4">4 / 5</span>
-  <div class="row">
-    <span><span class="arrow flat">— 持平</span></span>
-    <span>2026-05-11</span>
+  <div class="card-head">
+    <span class="pillar-name">CIP 基差（完整）</span>
+    <span class="bin bin4">4 / 5</span>
   </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>monthly</span>
+  <span class="pillar-key">CipBasisFull</span>
+  <p class="card-desc">抛补利率平价（CIP）偏离，标准美元/人民币 swap 口径。基差走阔说明美元在该期限上稀缺，链上美元稳定币溢价同步抬升。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-08</span>
+    <span class="cadence">monthly</span>
   </div>
 </a>
 
 <a class="card" href="/pillars/CipBasisProxy.html">
-  <span class="pillar-name">CIP 基差（代理）</span>
+  <div class="card-head">
+    <span class="pillar-name">CIP 基差（代理）</span>
+    <span class="bin bin2">2 / 5</span>
+  </div>
   <span class="pillar-key">CipBasisProxy</span>
-  <span class="bin bin2">2 / 5</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-05-11</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>monthly</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/SouthboundFlow.html">
-  <span class="pillar-name">南向通净流</span>
-  <span class="pillar-key">SouthboundFlow</span>
-  <span class="bin bin3">3 / 5（中位）</span>
-  <div class="row">
-    <span><span class="arrow up">▲ 上行</span></span>
-    <span>2026-05-12</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/CnShareCombined.html">
-  <span class="pillar-name">在华份额合成</span>
-  <span class="pillar-key">CnShareCombined</span>
-  <span class="bin bin5">5 / 5（最高）</span>
-  <div class="row">
-    <span><span class="arrow up">▲ 上行</span></span>
-    <span>2026-05-08</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/SafeForexBalance.html">
-  <span class="pillar-name">外管局结售汇差</span>
-  <span class="pillar-key">SafeForexBalance</span>
-  <span class="bin bin1">1 / 5（最低）</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-03-31</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>monthly</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/ForexSettlement.html">
-  <span class="pillar-name">结售汇综合差</span>
-  <span class="pillar-key">ForexSettlement</span>
-  <span class="bin bin4">4 / 5</span>
-  <div class="row">
-    <span><span class="arrow down">▼ 下行</span></span>
-    <span>2026-03-31</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>monthly</span>
+  <p class="card-desc">用替代数据源构造的 CIP 基差，覆盖完整版本缺失日。解读同上：反映美元供给侧紧张程度。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-09</span>
+    <span class="cadence">monthly</span>
   </div>
 </a>
 
 <a class="card" href="/pillars/CnhDepositsHk.html">
-  <span class="pillar-name">港 CNH 存款</span>
-  <span class="pillar-key">CnhDepositsHk</span>
-  <span class="bin bin1">1 / 5（最低）</span>
-  <div class="row">
-    <span><span class="arrow flat">— 持平</span></span>
-    <span>2026-03-31</span>
+  <div class="card-head">
+    <span class="pillar-name">港 CNH 存款</span>
+    <span class="bin bin1">1 / 5（最低）</span>
   </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>monthly</span>
+  <span class="pillar-key">CnhDepositsHk</span>
+  <p class="card-desc">香港金管局口径的离岸人民币存款余额。存款大幅萎缩可能意味着资金离开 CNH 体系，转向稳定币或美元资产。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-03-31</span>
+    <span class="cadence">monthly</span>
+  </div>
+</a>
+
+<div class="card card-placeholder" aria-disabled="true">
+  <div class="card-head">
+    <span class="pillar-name">USDT/CNY P2P 溢价</span>
+    <span class="bin placeholder-bin">数据采集中</span>
+  </div>
+  <span class="pillar-key">P2pPremium</span>
+  <p class="card-desc">USDT/CNY 在主要 P2P 交易所（Binance、OKX 等）相对官方 USD/CNY 中间价的溢价率。正溢价反映境内对美元稳定币的边际超额需求，与离岸价差、CIP 基差互为镜像。</p>
+  <div class="card-foot">
+    <span class="placeholder-note">Binance P2P 报价已接入（~10 天历史），待 OKX 等其他交易所扩展并积累 6 个月样本后正式纳入。</span>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="pillar-group" id="group-cn_activity">
+  <div class="group-head">
+    <h3 class="group-title">三、中国关联链上活动
+      <span class="group-subtitle">CN-linked On-chain Activity</span>
+    </h3>
+    <p class="group-lead">基于公开地址聚类启发式的中国关联活跃度与全球链上份额。以聚合统计指标为单位，不针对任何具体主体。</p>
+  </div>
+  <div class="grid">
+
+<a class="card" href="/pillars/CnAnchorAggregate.html">
+  <div class="card-head">
+    <span class="pillar-name">中国大陆相关地址综合活动</span>
+    <span class="bin bin4">4 / 5</span>
+  </div>
+  <span class="pillar-key">CnAnchorAggregate</span>
+  <p class="card-desc">由多类中国关联地址聚类（矿池、历史交易所、ICO 残值等）合成的综合活跃度。是链上证据的总览，作为聚合统计指标使用，不针对任何单一主体。</p>
+  <div class="card-foot">
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-09</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnShareCombined.html">
+  <div class="card-head">
+    <span class="pillar-name">在华份额合成</span>
+    <span class="bin bin5">5 / 5（最高）</span>
+  </div>
+  <span class="pillar-key">CnShareCombined</span>
+  <p class="card-desc">全球 USDT/USDC 链上活动中可归因于中国关联地址聚类的合成份额。份额上升直接表征中国关联稳定币活动强度的扩张，与传统美元流动性外溢可区分。</p>
+  <div class="card-foot">
+    <span><span class="arrow up">▲ 上行</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+  </div>
+</section>
+
+<section class="pillar-group" id="group-crossborder_flow">
+  <div class="group-head">
+    <h3 class="group-title">四、跨境流向
+      <span class="group-subtitle">Cross-border Flow</span>
+    </h3>
+    <p class="group-lead">稳定币跨境桥接与传统跨境通道的资金流量对照——稳定币是否构成正式 BoP 报表之外的额外通道。</p>
+  </div>
+  <div class="grid">
+
+<a class="card card-highlight" href="/pillars/CnUsKycBridgeOutflow.html">
+  <div class="card-head">
+    <span class="pillar-name">中美 KYC 桥净流出<span class="card-badge">重点指标</span></span>
+    <span class="bin bin5">5 / 5（最高）</span>
+  </div>
+  <span class="pillar-key">CnUsKycBridgeOutflow</span>
+  <p class="card-desc">中国相关地址 → 美国合规交易所（Coinbase / Kraken / Gemini）的链上净流。净流出抬升是「通过链上把美元送入美国 KYC 体系」的最直接证据。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">—</span> · 2026-05-09</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/SouthboundFlow.html">
+  <div class="card-head">
+    <span class="pillar-name">南向通净流</span>
+    <span class="bin bin5">5 / 5（最高）</span>
+  </div>
+  <span class="pillar-key">SouthboundFlow</span>
+  <p class="card-desc">港股通南向净买入，即内地资金流向港股的明渠规模。流出加大常与稳定币跨境配置形成互补，是境内资本外溢的合规出口。</p>
+  <div class="card-foot">
+    <span><span class="arrow up">▲ 上行</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/SafeForexBalance.html">
+  <div class="card-head">
+    <span class="pillar-name">外管局结售汇差</span>
+    <span class="bin bin1">1 / 5（最低）</span>
+  </div>
+  <span class="pillar-key">SafeForexBalance</span>
+  <p class="card-desc">国家外管局公布的银行代客结售汇差额。售汇大于结汇（差额转负）反映换汇需求强，与稳定币非正规渠道形成互替。</p>
+  <div class="card-foot">
+    <span><span class="arrow down">▼ 下行</span> · 2026-03-31</span>
+    <span class="cadence">monthly</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/ForexSettlement.html">
+  <div class="card-head">
+    <span class="pillar-name">结售汇综合差</span>
+    <span class="bin bin4">4 / 5</span>
+  </div>
+  <span class="pillar-key">ForexSettlement</span>
+  <p class="card-desc">结售汇加涉外收付款的综合差额，覆盖更广口径。解读同结售汇差，但更接近「全口径」跨境资金压力。</p>
+  <div class="card-foot">
+    <span><span class="arrow down">▼ 下行</span> · 2026-03-31</span>
+    <span class="cadence">monthly</span>
   </div>
 </a>
 
 <a class="card" href="/pillars/BopFlows.html">
-  <span class="pillar-name">国际收支流</span>
+  <div class="card-head">
+    <span class="pillar-name">国际收支流</span>
+    <span class="bin bin4">4 / 5</span>
+  </div>
   <span class="pillar-key">BopFlows</span>
-  <span class="bin bin4">4 / 5</span>
-  <div class="row">
-    <span><span class="arrow flat">—</span></span>
-    <span>2025-12-31</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>quarterly</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/AnnualBenchmark.html">
-  <span class="pillar-name">年度基准</span>
-  <span class="pillar-key">AnnualBenchmark</span>
-  <span class="bin bin1">1 / 5（最低）</span>
-  <div class="row">
-    <span><span class="arrow flat">—</span></span>
-    <span>2025-12-31</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>annual benchmark</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/CnUsKycBridgeOutflow.html">
-  <span class="pillar-name">中美 KYC 桥净流出</span>
-  <span class="pillar-key">CnUsKycBridgeOutflow</span>
-  <span class="bin bin1">1 / 5（最低）</span>
-  <div class="row">
-    <span><span class="arrow flat">— 持平</span></span>
-    <span>2026-05-14</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+  <p class="card-desc">中国国际收支表中资本与金融账户的关键流量。外流压力上行时，链上稳定币可能成为不进入正式 BoP 报表的非正规跨境通道。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">—</span> · 2025-12-31</span>
+    <span class="cadence">quarterly</span>
   </div>
 </a>
 
 <a class="card" href="/pillars/StockConnectFlow.html">
-  <span class="pillar-name">StockConnectFlow</span>
+  <div class="card-head">
+    <span class="pillar-name">StockConnectFlow</span>
+    <span class="bin none">—</span>
+  </div>
   <span class="pillar-key">StockConnectFlow</span>
-  <span class="bin none">—</span>
-  <div class="row">
-    <span><span class="arrow flat">—</span></span>
-    <span>—</span>
-  </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+  <p class="card-desc">沪深港通整体资金流（南向加北向）。与传统跨境通道对照，用于隔离稳定币独有的链上路径。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">—</span> · —</span>
+    <span class="cadence">daily</span>
   </div>
 </a>
 
-<a class="card" href="/pillars/CnAnchorAggregate.html">
-  <span class="pillar-name">中国大陆相关地址综合活动</span>
-  <span class="pillar-key">CnAnchorAggregate</span>
-  <span class="bin bin4">4 / 5</span>
-  <div class="row">
-    <span><span class="arrow up">▲ 上行</span></span>
-    <span>2026-05-14</span>
   </div>
-  <div class="row">
-    <span>更新节奏</span>
-    <span>daily</span>
+</section>
+
+<section class="pillar-group" id="group-controls">
+  <div class="group-head">
+    <h3 class="group-title">对照变量集
+      <span class="group-subtitle">Conditioning Set</span>
+    </h3>
+    <p class="group-lead">做残差化时控制的共同冲击对照变量，不进入 CSPI 主体——油价、黄金、央行流动性、年度校准锚。</p>
+  </div>
+  <div class="grid">
+
+<a class="card" href="/pillars/OilStress.html">
+  <div class="card-head">
+    <span class="pillar-name">油价压力</span>
+    <span class="bin bin5">5 / 5（最高）</span>
+  </div>
+  <span class="pillar-key">OilStress</span>
+  <p class="card-desc">用油价水平与波动率刻画大宗商品端的外部冲击。油价剧烈波动期，跨境结算与大宗贸易场外结算（含 USDT）需求被放大。</p>
+  <div class="card-foot">
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-04</span>
+    <span class="cadence">daily</span>
   </div>
 </a>
 
-</div>
+<a class="card" href="/pillars/GoldPremium.html">
+  <div class="card-head">
+    <span class="pillar-name">黄金溢价</span>
+    <span class="bin bin5">5 / 5（最高）</span>
+  </div>
+  <span class="pillar-key">GoldPremium</span>
+  <p class="card-desc">上海金相对伦敦金的人民币计价溢价。溢价上行意味着境内对硬通货避险需求升温，与稳定币需求同源。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-08</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/PbcLiquidityOps.html">
+  <div class="card-head">
+    <span class="pillar-name">央行流动性操作</span>
+    <span class="bin bin4">4 / 5</span>
+  </div>
+  <span class="pillar-key">PbcLiquidityOps</span>
+  <p class="card-desc">央行公开市场操作（OMO、MLF）的净投放方向。净回笼或紧平衡时，境内人民币偏紧，稳定币替代渠道活跃度上升。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-09</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/AnnualBenchmark.html">
+  <div class="card-head">
+    <span class="pillar-name">年度基准</span>
+    <span class="bin bin1">1 / 5（最低）</span>
+  </div>
+  <span class="pillar-key">AnnualBenchmark</span>
+  <p class="card-desc">年度截面校准锚（年报、外储等慢速数据）。提供长期参照线，校正快频信号的水平偏移。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">—</span> · 2025-12-31</span>
+    <span class="cadence">annual benchmark</span>
+  </div>
+</a>
+
+  </div>
+</section>
+
+
+</section>
 
 <footer>
-  <p>数据快照：2026-05-14（较内部数据滖后 0 天） ·
+  <p class="footer-notice">本平台输出仅用于学术研究与方法学展示，不构成对任何具体主体的监测、监管建议或投资建议。所有链上识别均以公开地址聚类与启发式为基础，以聚合统计指标为单位，不公开任何单一主体级别的判定。</p>
+  <p>数据快照：2026-05-09（较内部数据滞后 7 天） ·
     已按学术发布规约施加 ±5% 噪声 + 5 分位离散化（§12.6 三轨发布）</p>
-  <p>CSPI Research · 个人独立研究项目 ·
-    代码私有 · 数据为研究用途，不构成投资建议</p>
+  <p>CSPI Research · 独立学术研究项目 ·
+    代码私有 · 数据为研究用途，不构成投资、交易、监管或法律建议</p>
 </footer>
 </div>
 </body>

@@ -1,10 +1,10 @@
 {
-  "snapshot_date": "2026-05-14",
-  "generated_at_utc": "2026-05-14T02:55:40Z",
+  "snapshot_date": "2026-05-09",
+  "generated_at_utc": "2026-05-16T01:04:24Z",
   "methodology_version": "v1.6",
   "publication_track": "academic",
   "masking": {
-    "lag_days": 0,
+    "lag_days": 7,
     "noise_stddev_pct": 0.05,
     "n_bins": 5
   },
@@ -17,16 +17,16 @@
       "key": "RMBPressure",
       "name_cn": "人民币离岸压力",
       "cadence": "daily",
-      "latest_date": "2026-05-13",
-      "latest_bin": "Bin 2/5",
-      "direction": "下行",
+      "latest_date": "2026-05-08",
+      "latest_bin": "Bin 3/5",
+      "direction": "持平",
       "has_data": true
     },
     {
       "key": "USYieldCurve",
-      "name_cn": "美傘收益率曲线",
+      "name_cn": "美债收益率曲线",
       "cadence": "daily",
-      "latest_date": "2026-05-12",
+      "latest_date": "2026-05-08",
       "latest_bin": "Bin 4/5",
       "direction": "持平",
       "has_data": true
@@ -35,9 +35,9 @@
       "key": "GlobalUSDStress_simple",
       "name_cn": "全球美元流动性压力",
       "cadence": "daily",
-      "latest_date": "2026-05-12",
-      "latest_bin": "Bin 3/5",
-      "direction": "下行",
+      "latest_date": "2026-05-08",
+      "latest_bin": "Bin 4/5",
+      "direction": "上行",
       "has_data": true
     },
     {
@@ -53,7 +53,7 @@
       "key": "GoldPremium",
       "name_cn": "黄金溢价",
       "cadence": "daily",
-      "latest_date": "2026-05-12",
+      "latest_date": "2026-05-08",
       "latest_bin": "Bin 5/5",
       "direction": "持平",
       "has_data": true
@@ -62,7 +62,7 @@
       "key": "OffshoreLiquidity",
       "name_cn": "离岸人民币流动性",
       "cadence": "daily",
-      "latest_date": "2026-05-12",
+      "latest_date": "2026-05-08",
       "latest_bin": "Bin 2/5",
       "direction": "持平",
       "has_data": true
@@ -71,9 +71,9 @@
       "key": "PbcLiquidityOps",
       "name_cn": "央行流动性操作",
       "cadence": "daily",
-      "latest_date": "2026-05-13",
-      "latest_bin": "Bin 2/5",
-      "direction": "下行",
+      "latest_date": "2026-05-09",
+      "latest_bin": "Bin 4/5",
+      "direction": "持平",
       "has_data": true
     },
     {
@@ -89,7 +89,7 @@
       "key": "CipBasisFull",
       "name_cn": "CIP 基差（完整）",
       "cadence": "monthly",
-      "latest_date": "2026-05-11",
+      "latest_date": "2026-05-08",
       "latest_bin": "Bin 4/5",
       "direction": "持平",
       "has_data": true
@@ -98,17 +98,17 @@
       "key": "CipBasisProxy",
       "name_cn": "CIP 基差（代理）",
       "cadence": "monthly",
-      "latest_date": "2026-05-11",
+      "latest_date": "2026-05-09",
       "latest_bin": "Bin 2/5",
-      "direction": "下行",
+      "direction": "持平",
       "has_data": true
     },
     {
       "key": "SouthboundFlow",
       "name_cn": "南向通净流",
       "cadence": "daily",
-      "latest_date": "2026-05-12",
-      "latest_bin": "Bin 3/5",
+      "latest_date": "2026-05-08",
+      "latest_bin": "Bin 5/5",
       "direction": "上行",
       "has_data": true
     },
@@ -170,9 +170,9 @@
       "key": "CnUsKycBridgeOutflow",
       "name_cn": "中美 KYC 桥净流出",
       "cadence": "daily",
-      "latest_date": "2026-05-14",
-      "latest_bin": "Bin 1/5",
-      "direction": "持平",
+      "latest_date": "2026-05-09",
+      "latest_bin": "Bin 5/5",
+      "direction": "—",
       "has_data": true
     },
     {
@@ -188,11 +188,11 @@
       "key": "CnAnchorAggregate",
       "name_cn": "中国大陆相关地址综合活动",
       "cadence": "daily",
-      "latest_date": "2026-05-14",
+      "latest_date": "2026-05-09",
       "latest_bin": "Bin 4/5",
-      "direction": "上行",
+      "direction": "下行",
       "has_data": true
     }
   ],
-  "disclaimer": "Academic-version publication. All numeric values were lag-shifted by 7 days, multiplied by 1 + N(0, 0.05), then discretized into 5 quintile bins. Precise z-scores are available only in the internal version. Data is for research only — not investment advice."
+  "disclaimer": "Academic-version publication. All numeric values were lag-shifted by 7 days, multiplied by 1 + N(0, 0.05), then discretized into 5 quintile bins. Precise z-scores are available only in the internal version. Data is for academic research and methodology demonstration only — not investment, trading, regulatory, or legal advice, and not constituting monitoring of any specific entity. All on-chain identification uses aggregate statistical indicators based on public address-clustering heuristics; no entity-level judgements are published."
 }

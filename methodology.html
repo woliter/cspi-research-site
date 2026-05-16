@@ -12,7 +12,7 @@
 <body>
 <header class="site">
   <div class="inner">
-    <h1><a href="/" style="color:inherit;text-decoration:none">CSPI · 中国稳定币洗透指数</a></h1>
+    <h1><a href="/" style="color:inherit;text-decoration:none">CSPI · 中国稳定币渗透指数</a></h1>
     <nav>
       <a href="/">综合 + 分项</a>
       <a href="/flow/">资金流向</a>
@@ -26,56 +26,95 @@
 
 <h2>方法学概要</h2>
 <p>
-  CSPI（China Stablecoin Penetration Index，中国稳定币洗透指数）综合衡量
-  USDT/USDC 等美元稳定币在中国境内/中国系实体场景下的洗透深度与速度。
-  指数由 <strong>28 个分项 (pillar)</strong> 组成，分为三大支柱：
+  CSPI（China Stablecoin Penetration Index，中国稳定币渗透指数）测度的不是
+  抽象意义上的"跨境渗透"，而是
+  <strong>由稳定币发行、离岸价差、锚点行为、跨境桥接与境内关联活动共同表征、
+  与传统美元流动性外溢可区分的中国关联稳定币活动强度</strong>。
 </p>
+
+<h3>四类信息并行报告</h3>
+<p>评阅意见 [S1] 明确要求：CSPI 在指数构建中区分四类信息，分项指数与综合指数并行报告。</p>
 <ul>
-  <li><strong>宏观与外汇压力</strong>：人民币离岸压力、美傘曲线、油价、黄金溢价、CIP 基差等。</li>
-  <li><strong>结算与跨境流</strong>：南向通、沪深港通、外管局结售汇差、BOP、Tether 发行净流等。</li>
-  <li><strong>链上活动信号</strong>（Phase 2）：基于地址聚类与跨链传播构造的若干事件型 pillar。
-    详细方法与样本规模将在项目完成后公开。</li>
-  <li><strong>中美 KYC 桥资金流</strong>（Phase 4 · 顶级指标）：基于中国相关地址与公开归因的美国
-    KYC 交易所（Coinbase / Kraken / Gemini 等）之间跨链 USDT / USDC / BTC / ETH 流量。
-    详细计算说明在项目完成后公开。</li>
+  <li><strong>一、全球供给</strong>：美元稳定币的源头产能、全球美元流动性与利率结构。
+    例：Tether 发行净流、全球美元流动性压力、美债收益率曲线。</li>
+  <li><strong>二、离岸价格</strong>：人民币离岸/在岸价差、美元离岸借贷成本与境内场外报价。
+    例：CNH-CNY 偏离、CIP 基差、港 CNH 存款、USDT/CNY P2P 溢价。</li>
+  <li><strong>三、中国关联链上活动</strong>：基于公开地址聚类启发式的中国关联活跃度与全球链上份额。
+    以聚合统计指标为单位，不针对任何具体主体。</li>
+  <li><strong>四、跨境流向</strong>：稳定币跨境桥接（如中美 KYC 桥）与传统跨境通道（南向通、结售汇、BoP）的资金流量对照。</li>
 </ul>
+
+<h3>对照变量残差化（区分渗透特定信息与共同冲击）</h3>
+<p>
+  评阅意见 [S1] 关键步骤：在指数合成阶段，先以
+  <strong>VIX、DXY、加密市场总市值、TED 利差</strong>等做投影，
+  对残差再做因子提取，以分离"渗透特定"信息与全球美元流动性、加密市场风险情绪等共同冲击。
+  对照变量本身在网站上作为「对照变量集」独立分组展示，<em>不进入</em> CSPI 主体。
+</p>
 
 <h3>标准化与合成</h3>
 <p>
   每个 pillar 内部对其底层信号做 z-score 标准化（rolling 365d），再按
   <code>data_quality</code> 加权聚合为该 pillar 的 <code>composite_z</code>。
-  首页“综合”为 28 个 pillar 的横向平均 z（cross-pillar mean）。
+  首页"综合"为所有进入 CSPI 主体的 pillar 横向平均 z（cross-pillar mean）。
+  权重稳健性比较包括等权重、主成分、动态因子三种方案。
 </p>
 
-<h3>预测区间</h3>
+<h3>事件验证</h3>
 <p>
-  每周日 06:00 UTC 用 MAPIE jackknife+（ACI）按 pillar 重新拟合，
-  给出 90% / 95% 预测带。学术版仅展示 ±5% 噪声后的 z 値与分位标签，
-  完整置信区间见内部版报告。
+  在 USDC 脱锚（2023-03）、Tornado Cash 制裁（2022-08）、
+  GENIUS Act 通过（2025）等关键事件窗口对 CSPI 进行可解释响应检验，
+  并对 OTC 溢价异常、CNH-CNY 价差波动、跨境桥接流量突变做交叉验证。
 </p>
+
+
+<h3>可复核边界（Reproducibility Boundary）</h3>
+<p>
+本平台采用分层披露策略，明确学术研究的可复核范围与不公开内容的方法学理由：
+</p>
+<p><strong>公开披露：</strong></p>
+<ul>
+  <li><strong>变量类别</strong>：四类信息分组与每个分项的口径定义；</li>
+  <li><strong>数据来源类型</strong>：宏观（Wind/FRED/IMF/BIS/CEIC）、链上（公开节点 + Bitquery 等可订阅源）、官方与监管公开数据；</li>
+  <li><strong>合成方法</strong>：z-score 滚动标准化（365d）、动态因子提取、等权重 / 主成分 / 滚动窗口三种权重比较；</li>
+  <li><strong>验证标准</strong>：脱锚事件、监管事件、OTC 溢价异常、CNH-CNY 价差波动、跨境桥接流量突变等事件窗口的可解释响应；</li>
+  <li><strong>残差化步骤</strong>：先以 VIX、DXY、加密市场总市值、TED 利差等做投影，对残差再做因子提取，分离渗透特定信息。</li>
+</ul>
+<p><strong>不公开（作为知识产权与研究有效性保护内容）：</strong></p>
+<ul>
+  <li>具体地址聚类库与种子地址列表；</li>
+  <li>启发式识别的阈值参数与传播权重；</li>
+  <li>内部版精确 z 值与原始指标。</li>
+</ul>
+<p class="note-small">
+不公开的学术理由：识别参数一旦公开会被对抗性绕过，导致研究有效性退化；
+公开变量类别、来源类型与合成方法已足以支持外部检验与方法学复现。
+</p>
+
 
 <h3>三轨发布（§12.6）</h3>
 <ol>
   <li><strong>内部版</strong>：精确 z + 原始指标，仅本地。</li>
   <li><strong>合作研究版</strong>：脱标签、加噪、按需共享。</li>
-  <li><strong>学术发布版（本网站）</strong>：滑后 7 天 + ±5% 噪声 + 5 分位离散化。</li>
+  <li><strong>学术发布版（本网站）</strong>：滞后 7 天 + ±5% 噪声 + 5 分位离散化。</li>
 </ol>
 
-<h3>方法学版本与引用</h3>
-<p>
-  当前方法学版本：<code>v1.6</code>（2026-05-11）。完整版（DOCX）：
-  作者邮件索取（<a href="/about.html">见关于页</a>）。
+<h3>平台功能边界</h3>
+<p class="platform-notice">
+  本平台输出仅用于学术研究与方法学展示，不构成对任何具体主体的监测、监管建议或投资建议。所有链上识别均以公开地址聚类与启发式为基础，以聚合统计指标为单位，不公开任何单一主体级别的判定。
 </p>
-<p style="color:#888;font-size:13px">
-  引用建议：CSPI Research (2026). CSPI: 中国稳定币洗透指数. 方法学 v1.6.
-  <code>https://cspi-research.com/methodology.html</code>
+
+<h3>方法学版本</h3>
+<p>
+  当前方法学版本：<code>v1.7</code>（2026-05-16，新增四类信息分组与残差化步骤）。
 </p>
 
 <footer>
-  <p>数据快照：2026-05-14（较内部数据滖后 0 天） ·
+  <p class="footer-notice">本平台输出仅用于学术研究与方法学展示，不构成对任何具体主体的监测、监管建议或投资建议。所有链上识别均以公开地址聚类与启发式为基础，以聚合统计指标为单位，不公开任何单一主体级别的判定。</p>
+  <p>数据快照：2026-05-09（较内部数据滞后 7 天） ·
     已按学术发布规约施加 ±5% 噪声 + 5 分位离散化（§12.6 三轨发布）</p>
-  <p>CSPI Research · 个人独立研究项目 ·
-    代码私有 · 数据为研究用途，不构成投资建议</p>
+  <p>CSPI Research · 独立学术研究项目 ·
+    代码私有 · 数据为研究用途，不构成投资、交易、监管或法律建议</p>
 </footer>
 </div>
 </body>
