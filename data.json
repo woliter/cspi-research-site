@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-05-09",
-  "generated_at_utc": "2026-05-16T03:30:15Z",
+  "snapshot_date": "2026-05-10",
+  "generated_at_utc": "2026-05-17T09:30:00Z",
   "methodology_version": "v1.6",
   "publication_track": "academic",
   "masking": {
@@ -10,7 +10,7 @@
   },
   "composite": {
     "bin": "Bin 3/5",
-    "direction": "下行"
+    "direction": "持平"
   },
   "pillars": [
     {
@@ -98,7 +98,7 @@
       "key": "CipBasisProxy",
       "name_cn": "CIP 基差（代理）",
       "cadence": "monthly",
-      "latest_date": "2026-05-09",
+      "latest_date": "2026-05-10",
       "latest_bin": "Bin 2/5",
       "direction": "持平",
       "has_data": true
@@ -171,7 +171,7 @@
       "name_cn": "中美 KYC 桥净流出",
       "cadence": "daily",
       "latest_date": "2026-05-09",
-      "latest_bin": "Bin 5/5",
+      "latest_bin": "Bin 1/5",
       "direction": "—",
       "has_data": true
     },
@@ -188,7 +188,7 @@
       "key": "CnAnchorAggregate",
       "name_cn": "中国大陆相关地址综合活动",
       "cadence": "daily",
-      "latest_date": "2026-05-09",
+      "latest_date": "2026-05-10",
       "latest_bin": "Bin 4/5",
       "direction": "下行",
       "has_data": true
