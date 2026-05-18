@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-05-10",
-  "generated_at_utc": "2026-05-17T09:30:00Z",
+  "snapshot_date": "2026-05-11",
+  "generated_at_utc": "2026-05-18T03:05:22Z",
   "methodology_version": "v1.6",
   "publication_track": "academic",
   "masking": {
@@ -9,15 +9,15 @@
     "n_bins": 5
   },
   "composite": {
-    "bin": "Bin 3/5",
-    "direction": "持平"
+    "bin": "Bin 4/5",
+    "direction": "下行"
   },
   "pillars": [
     {
       "key": "RMBPressure",
       "name_cn": "人民币离岸压力",
       "cadence": "daily",
-      "latest_date": "2026-05-08",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 3/5",
       "direction": "持平",
       "has_data": true
@@ -26,7 +26,7 @@
       "key": "USYieldCurve",
       "name_cn": "美债收益率曲线",
       "cadence": "daily",
-      "latest_date": "2026-05-08",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 4/5",
       "direction": "持平",
       "has_data": true
@@ -35,9 +35,9 @@
       "key": "GlobalUSDStress_simple",
       "name_cn": "全球美元流动性压力",
       "cadence": "daily",
-      "latest_date": "2026-05-08",
-      "latest_bin": "Bin 4/5",
-      "direction": "上行",
+      "latest_date": "2026-05-11",
+      "latest_bin": "Bin 3/5",
+      "direction": "下行",
       "has_data": true
     },
     {
@@ -53,7 +53,7 @@
       "key": "GoldPremium",
       "name_cn": "黄金溢价",
       "cadence": "daily",
-      "latest_date": "2026-05-08",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 5/5",
       "direction": "持平",
       "has_data": true
@@ -62,7 +62,7 @@
       "key": "OffshoreLiquidity",
       "name_cn": "离岸人民币流动性",
       "cadence": "daily",
-      "latest_date": "2026-05-08",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 2/5",
       "direction": "持平",
       "has_data": true
@@ -71,7 +71,7 @@
       "key": "PbcLiquidityOps",
       "name_cn": "央行流动性操作",
       "cadence": "daily",
-      "latest_date": "2026-05-09",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 4/5",
       "direction": "持平",
       "has_data": true
@@ -89,7 +89,7 @@
       "key": "CipBasisFull",
       "name_cn": "CIP 基差（完整）",
       "cadence": "monthly",
-      "latest_date": "2026-05-08",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 4/5",
       "direction": "持平",
       "has_data": true
@@ -98,18 +98,18 @@
       "key": "CipBasisProxy",
       "name_cn": "CIP 基差（代理）",
       "cadence": "monthly",
-      "latest_date": "2026-05-10",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 2/5",
-      "direction": "持平",
+      "direction": "下行",
       "has_data": true
     },
     {
       "key": "SouthboundFlow",
       "name_cn": "南向通净流",
       "cadence": "daily",
-      "latest_date": "2026-05-08",
-      "latest_bin": "Bin 5/5",
-      "direction": "上行",
+      "latest_date": "2026-05-11",
+      "latest_bin": "Bin 2/5",
+      "direction": "下行",
       "has_data": true
     },
     {
@@ -153,8 +153,17 @@
       "name_cn": "国际收支流",
       "cadence": "quarterly",
       "latest_date": "2025-12-31",
-      "latest_bin": "Bin 4/5",
+      "latest_bin": "Bin 5/5",
       "direction": "—",
+      "has_data": true
+    },
+    {
+      "key": "HotMoneyResidual",
+      "name_cn": "热钱剩余项",
+      "cadence": "monthly",
+      "latest_date": "2026-04-30",
+      "latest_bin": "Bin 4/5",
+      "direction": "下行",
       "has_data": true
     },
     {
@@ -170,9 +179,9 @@
       "key": "CnUsKycBridgeOutflow",
       "name_cn": "中美 KYC 桥净流出",
       "cadence": "daily",
-      "latest_date": "2026-05-09",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 1/5",
-      "direction": "—",
+      "direction": "持平",
       "has_data": true
     },
     {
@@ -188,9 +197,9 @@
       "key": "CnAnchorAggregate",
       "name_cn": "中国大陆相关地址综合活动",
       "cadence": "daily",
-      "latest_date": "2026-05-10",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 4/5",
-      "direction": "下行",
+      "direction": "上行",
       "has_data": true
     }
   ],
