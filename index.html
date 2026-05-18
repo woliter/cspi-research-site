@@ -29,14 +29,14 @@
     <div class="composite-hero-text">
       <div class="composite-eyebrow">CSPI 综合指数 · pillar 平均 z</div>
       <div class="composite-bin-wrap">
-        <span class="bin composite-bin bin4">4 / 5</span>
+        <span class="bin composite-bin bin5">5 / 5（最高）</span>
       </div>
-      <div class="composite-meta">方向 <span class="arrow down">▼ 下行</span> · 快照 2026-05-11（滞后 7 天）</div>
+      <div class="composite-meta">方向 <span class="arrow up">▲ 上行</span> · 快照 2026-05-11（滞后 7 天）</div>
       <p class="composite-desc">CSPI（China Stablecoin Penetration Index）测度的不是抽象意义上的「跨境渗透」，而是由稳定币发行、离岸价差、锚点行为、跨境桥接与境内关联活动共同表征、与传统美元流动性外溢可区分的中国关联稳定币活动强度。构造上以全球供给、离岸价格、中国关联活动、跨境流向四类信息并行报告；在指数合成阶段对 VIX、DXY、加密市场总市值、TED 利差等做投影，对残差再做因子提取，以分离渗透特定信息与共同冲击。右图展示综合 z 分数的近期轨迹与关键事件窗口标注。</p>
       <p class="validity-note"><strong>方法学边界：</strong>CSPI 的内容效度（content validity）：本指数关注「与传统美元流动性外溢可区分」的中国关联稳定币活动强度，采用四类信息并行 + 对照变量残差化的合成路径，不等同于全球加密市场风险情绪或广义美元流动性。</p>
     </div>
     <div class="composite-hero-chart">
-      <img class="composite-spark" src="/charts/cspi_composite.png?v=1779073518" alt="CSPI 综合 z 分数走势">
+      <img class="composite-spark" src="/charts/cspi_composite.png?v=1779089525" alt="CSPI 综合 z 分数走势">
     </div>
   </div>
 </section>
@@ -70,7 +70,7 @@
   <span class="pillar-key">TetherIssuanceFlows</span>
   <p class="card-desc">USDT 全网发行（增发减赎回）的净额。大额净发行常伴随亚洲场外与 OTC 通道需求扩张。</p>
   <div class="card-foot">
-    <span><span class="arrow down">▼ 下行</span> · 2026-05-08</span>
+    <span><span class="arrow up">▲ 上行</span> · 2026-05-11</span>
     <span class="cadence">daily</span>
   </div>
 </a>
@@ -205,7 +205,7 @@
 <a class="card" href="/pillars/CnAnchorAggregate.html">
   <div class="card-head">
     <span class="pillar-name">中国大陆相关地址综合活动</span>
-    <span class="bin bin4">4 / 5</span>
+    <span class="bin bin5">5 / 5（最高）</span>
   </div>
   <span class="pillar-key">CnAnchorAggregate</span>
   <p class="card-desc">由公开来源整理的多类中国关联链上地址聚类合成的综合活跃度。作为聚合统计指标使用，具体识别类别与启发式参数受知识产权保护、不公开；本指标不针对任何单一主体。</p>
@@ -247,6 +247,19 @@
   </div>
   <span class="pillar-key">CnUsKycBridgeOutflow</span>
   <p class="card-desc">中国相关地址 → 美国合规交易所（Coinbase / Kraken / Gemini）的链上净流。净流出抬升是「通过链上把美元送入美国 KYC 体系」的最直接证据。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-11</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnUsKycBridgeInflow.html">
+  <div class="card-head">
+    <span class="pillar-name">中美 KYC 桥流入</span>
+    <span class="bin bin5">5 / 5（最高）</span>
+  </div>
+  <span class="pillar-key">CnUsKycBridgeInflow</span>
+  <p class="card-desc">美国合规交易所 → 中国相关地址的链上回流。持续抬升意味着美国 KYC 端反向供给境内地址，方向与外流相反。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-05-11</span>
     <span class="cadence">daily</span>
@@ -311,23 +324,10 @@
     <span class="bin bin4">4 / 5</span>
   </div>
   <span class="pillar-key">HotMoneyResidual</span>
-  <p class="card-desc">传统热钱衡量的两条经典口径——BoP 净误差与遗漏（Cuddington 1986 狭义法）+ 外汇储备变化扣除经常项目顺差与 FDI 净流入的剩余（World Bank 剩余法广义口径）。分位越高，越偏向非正规跨境外流压力上升，与稳定币替代地下钱庄 / 贸易伪报通道方向一致。</p>
+  <p class="card-desc">传统热钱代理的两条口径融合——净误差与遗漏（E&amp;O）直接观测（Cuddington 1986 狭义法的 E&amp;O 分量）+ 外汇储备变化扣除贸易差额与对外投资剩余（World Bank 剩余法广义口径）。分位越高，越偏向非正规跨境外流压力上升，与稳定币替代地下钱庄 / 贸易伪报通道方向一致。</p>
   <div class="card-foot">
     <span><span class="arrow down">▼ 下行</span> · 2026-04-30</span>
     <span class="cadence">monthly</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/StockConnectFlow.html">
-  <div class="card-head">
-    <span class="pillar-name">StockConnectFlow</span>
-    <span class="bin none">—</span>
-  </div>
-  <span class="pillar-key">StockConnectFlow</span>
-  <p class="card-desc">沪深港通整体资金流（南向加北向）。与传统跨境通道对照，用于隔离稳定币独有的链上路径。</p>
-  <div class="card-foot">
-    <span><span class="arrow flat">—</span> · —</span>
-    <span class="cadence">daily</span>
   </div>
 </a>
 
@@ -398,6 +398,29 @@
   </div>
 </section>
 
+
+<section class="pillar-group" id="group-other">
+  <div class="group-head">
+    <h3 class="group-title">其他<span class="group-subtitle">Other</span></h3>
+    <p class="group-lead">未列入主分组的分项（通常为新接入或实验性指标）。</p>
+  </div>
+  <div class="grid">
+
+<a class="card" href="/pillars/StockConnectFlow.html">
+  <div class="card-head">
+    <span class="pillar-name">StockConnectFlow</span>
+    <span class="bin none">—</span>
+  </div>
+  <span class="pillar-key">StockConnectFlow</span>
+  <p class="card-desc">沪深港通整体资金流（南向加北向）。与传统跨境通道对照，用于隔离稳定币独有的链上路径。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">—</span> · —</span>
+    <span class="cadence">daily</span>
+  </div>
+</a>
+
+  </div>
+</section>
 
 </section>
 

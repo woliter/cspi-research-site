@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-05-11",
-  "generated_at_utc": "2026-05-18T03:05:22Z",
+  "generated_at_utc": "2026-05-18T07:32:10Z",
   "methodology_version": "v1.6",
   "publication_track": "academic",
   "masking": {
@@ -9,8 +9,8 @@
     "n_bins": 5
   },
   "composite": {
-    "bin": "Bin 4/5",
-    "direction": "下行"
+    "bin": "Bin 5/5",
+    "direction": "上行"
   },
   "pillars": [
     {
@@ -80,9 +80,9 @@
       "key": "TetherIssuanceFlows",
       "name_cn": "Tether 发行净流",
       "cadence": "daily",
-      "latest_date": "2026-05-08",
+      "latest_date": "2026-05-11",
       "latest_bin": "Bin 4/5",
-      "direction": "下行",
+      "direction": "上行",
       "has_data": true
     },
     {
@@ -185,6 +185,15 @@
       "has_data": true
     },
     {
+      "key": "CnUsKycBridgeInflow",
+      "name_cn": "中美 KYC 桥流入",
+      "cadence": "daily",
+      "latest_date": "2026-05-11",
+      "latest_bin": "Bin 5/5",
+      "direction": "持平",
+      "has_data": true
+    },
+    {
       "key": "StockConnectFlow",
       "name_cn": "StockConnectFlow",
       "cadence": "daily",
@@ -198,7 +207,7 @@
       "name_cn": "中国大陆相关地址综合活动",
       "cadence": "daily",
       "latest_date": "2026-05-11",
-      "latest_bin": "Bin 4/5",
+      "latest_bin": "Bin 5/5",
       "direction": "上行",
       "has_data": true
     }
