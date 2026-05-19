@@ -27,18 +27,21 @@
 <section class="composite-hero">
   <div class="composite-hero-grid">
     <div class="composite-hero-text">
-      <div class="composite-eyebrow">CSPI 综合指数 · pillar 平均 z</div>
+      <div class="composite-eyebrow">
+        CSPI-v0 综合指数 · 质量门控 headline
+      </div>
       <div class="composite-bin-wrap">
-        <span class="bin composite-bin bin5">5 / 5（最高）</span>
+        <span class="bin composite-bin bin3">3 / 5（中位）</span>
       </div>
       <div class="composite-meta">
-        方向 <span class="arrow up">▲ 上行</span> · 快照 2026-05-12（滞后 7 天）
+        方向 <span class="arrow down">▼ 下行</span> · 快照 2026-05-12（滞后 7 天）·
+        纳入 11 个 headline 支柱
       </div>
-      <p class="composite-desc">CSPI（China Stablecoin Penetration Index）测度的不是抽象意义上的「跨境渗透」，而是由稳定币发行、离岸价差、锚点行为、跨境桥接与境内关联活动共同表征、与传统美元流动性外溢可区分的中国关联稳定币活动强度。构造上以全球供给、离岸价格、中国关联活动、跨境流向四类信息并行报告；在指数合成阶段对 VIX、DXY、加密市场总市值、TED 利差等做投影，对残差再做因子提取，以分离渗透特定信息与共同冲击。右图展示综合 z 分数的近期轨迹与关键事件窗口标注。</p>
-      <p class="validity-note"><strong>方法学边界：</strong>CSPI 的内容效度（content validity）：本指数关注「与传统美元流动性外溢可区分」的中国关联稳定币活动强度，采用四类信息并行 + 对照变量残差化的合成路径，不等同于全球加密市场风险情绪或广义美元流动性。</p>
+      <p class="composite-desc">CSPI（China Stablecoin Penetration Index）测度的不是资本外流总额，而是由稳定币发行、离岸价差、中国关联链上活动、跨境桥接与传统跨境通道共同表征的中国关联稳定币资本流动压力。当前公开运行版为 CSPI-v0：以标准化 pillar 为基础，仅将通过样本量、信号数和元数据门控的非控制变量纳入 headline。VIX、DXY、全球美元压力等对照变量独立展示，用于解释与后续残差化，不直接贡献 headline。</p>
+      <p class="validity-note"><strong>方法学边界：</strong>CSPI 的内容效度（content validity）：本指数关注「与传统美元流动性外溢可区分」的中国关联稳定币活动强度。当前 CSPI-v0 是等权监测原型，强调方向性压力和证据分层，不等同于全球加密市场风险情绪、广义美元流动性或资本流动规模估计。</p>
     </div>
     <div class="composite-hero-chart">
-      <img class="composite-spark" src="/charts/cspi_composite.png?v=1779151514" alt="CSPI 综合 z 分数走势">
+      <img class="composite-spark" src="/charts/cspi_composite.png?v=1779155834" alt="CSPI 综合 z 分数走势">
     </div>
   </div>
 </section>
@@ -46,7 +49,7 @@
 <p class="disclaimer">
   本页为 <strong>学术发布版</strong>。所有数值已经过：1) 较内部数据滞后 7 天；
   2) 加 ±5% 高斯乘法噪声；3) 离散化为 5 分位标签（仅显示 Bin k/5）。
-  精确 z 值与原始数据仅在内部版报告中提供。
+  精确 z 值与原始数据仅在内部版报告中提供。对照变量、废弃历史支柱和低样本事件证据不进入 headline。
 </p>
 
 <section class="pillars-section">
@@ -63,46 +66,20 @@
     <h3 class="group-title">一、全球供给
       <span class="group-subtitle">Global Supply</span>
     </h3>
-    <p class="group-lead">美元稳定币的源头产能、全球美元流动性与利率结构——CSPI 的供给侧背景。</p>
+    <p class="group-lead">美元稳定币的源头产能与合规供给侧扩张——CSPI 的稳定币流动性背景。</p>
   </div>
   <div class="grid">
 
 <a class="card" href="/pillars/TetherIssuanceFlows.html">
   <div class="card-head">
     <span class="pillar-name">Tether 发行净流</span>
-    <span class="bin bin1">1 / 5（最低）</span>
+    <span class="bin bin4">4 / 5</span>
   </div>
   <span class="pillar-key">TetherIssuanceFlows</span>
   <p class="card-desc">USDT 全网发行（增发减赎回）的净额。大额净发行常伴随亚洲场外与 OTC 通道需求扩张。</p>
   <div class="card-foot">
-    <span><span class="arrow down">▼ 下行</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/GlobalUSDStress_simple.html">
-  <div class="card-head">
-    <span class="pillar-name">全球美元流动性压力</span>
-    <span class="bin bin3">3 / 5（中位）</span>
-  </div>
-  <span class="pillar-key">GlobalUSDStress_simple</span>
-  <p class="card-desc">综合美元指数、TED 利差等观测全球美元紧绷程度。分位越高，美元越稀缺，新兴市场用稳定币囤美元的动机越强。</p>
-  <div class="card-foot">
-    <span><span class="arrow down">▼ 下行</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/USYieldCurve.html">
-  <div class="card-head">
-    <span class="pillar-name">美债收益率曲线</span>
-    <span class="bin bin4">4 / 5</span>
-  </div>
-  <span class="pillar-key">USYieldCurve</span>
-  <p class="card-desc">用 2s10s 等期限利差描述美债曲线形态。曲线越异常（深度倒挂或骤陡），美元流动性环境越扰动，影响 USDT 套利与跨境配置。</p>
-  <div class="card-foot">
-    <span><span class="arrow flat">— 持平</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-08</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -127,7 +104,7 @@
   <p class="card-desc">刻画离岸人民币（CNH）相对在岸（CNY）的偏离与波动。分位越高，离岸贬值压力越大，非正规跨境支付与稳定币换汇通道的边际动机越强。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Core · High</span>
   </div>
 </a>
 
@@ -140,7 +117,7 @@
   <p class="card-desc">用 CNH HIBOR 等指标观察香港人民币市场松紧。流动性收紧时跨境换汇成本上升，USDT/USDC 替代价值上升。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -153,7 +130,7 @@
   <p class="card-desc">抛补利率平价（CIP）偏离，标准美元/人民币 swap 口径。基差走阔说明美元在该期限上稀缺，链上美元稳定币溢价同步抬升。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-05-11</span>
-    <span class="cadence">monthly</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -166,7 +143,7 @@
   <p class="card-desc">用替代数据源构造的 CIP 基差，覆盖完整版本缺失日。解读同上：反映美元供给侧紧张程度。</p>
   <div class="card-foot">
     <span><span class="arrow down">▼ 下行</span> · 2026-05-11</span>
-    <span class="cadence">monthly</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -179,7 +156,7 @@
   <p class="card-desc">香港金管局口径的离岸人民币存款余额。存款大幅萎缩可能意味着资金离开 CNH 体系，转向稳定币或美元资产。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-03-31</span>
-    <span class="cadence">monthly</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -210,13 +187,13 @@
 <a class="card" href="/pillars/CnAnchorAggregate.html">
   <div class="card-head">
     <span class="pillar-name">中国大陆相关地址综合活动</span>
-    <span class="bin bin5">5 / 5（最高）</span>
+    <span class="bin bin4">4 / 5</span>
   </div>
   <span class="pillar-key">CnAnchorAggregate</span>
   <p class="card-desc">由公开来源整理的多类中国关联链上地址聚类合成的综合活跃度。作为聚合统计指标使用，具体识别类别与启发式参数受知识产权保护、不公开；本指标不针对任何单一主体。</p>
   <div class="card-foot">
     <span><span class="arrow up">▲ 上行</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Evidence · Low</span>
   </div>
 </a>
 
@@ -229,7 +206,7 @@
   <p class="card-desc">全球 USDT/USDC 链上活动中可归因于中国关联地址聚类的合成份额。份额上升直接表征中国关联稳定币活动强度的扩张，与传统美元流动性外溢可区分。</p>
   <div class="card-foot">
     <span><span class="arrow up">▲ 上行</span> · 2026-05-08</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Evidence · Low</span>
   </div>
 </a>
 
@@ -248,26 +225,13 @@
 <a class="card card-highlight" href="/pillars/CnUsKycBridgeOutflow.html">
   <div class="card-head">
     <span class="pillar-name">中美 KYC 桥净流出<span class="card-badge">重点指标</span></span>
-    <span class="bin bin5">5 / 5（最高）</span>
+    <span class="bin bin3">3 / 5（中位）</span>
   </div>
   <span class="pillar-key">CnUsKycBridgeOutflow</span>
   <p class="card-desc">中国相关地址 → 美国合规交易所（Coinbase / Kraken / Gemini）的链上净流。净流出抬升是「通过链上把美元送入美国 KYC 体系」的最直接证据。</p>
   <div class="card-foot">
     <span><span class="arrow up">▲ 上行</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
-  </div>
-</a>
-
-<a class="card" href="/pillars/CnUsKycBridgeInflow.html">
-  <div class="card-head">
-    <span class="pillar-name">中美 KYC 桥流入</span>
-    <span class="bin bin1">1 / 5（最低）</span>
-  </div>
-  <span class="pillar-key">CnUsKycBridgeInflow</span>
-  <p class="card-desc">美国合规交易所 → 中国相关地址的链上回流。持续抬升意味着美国 KYC 端反向供给境内地址，方向与外流相反。</p>
-  <div class="card-foot">
-    <span><span class="arrow down">▼ 下行</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Evidence · Low</span>
   </div>
 </a>
 
@@ -280,7 +244,7 @@
   <p class="card-desc">港股通南向净买入，即内地资金流向港股的明渠规模。流出加大常与稳定币跨境配置形成互补，是境内资本外溢的合规出口。</p>
   <div class="card-foot">
     <span><span class="arrow up">▲ 上行</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -293,7 +257,7 @@
   <p class="card-desc">国家外管局公布的银行代客结售汇差额。售汇大于结汇（差额转负）反映换汇需求强，与稳定币非正规渠道形成互替。</p>
   <div class="card-foot">
     <span><span class="arrow down">▼ 下行</span> · 2026-03-31</span>
-    <span class="cadence">monthly</span>
+    <span class="cadence">Core · High</span>
   </div>
 </a>
 
@@ -306,7 +270,7 @@
   <p class="card-desc">结售汇加涉外收付款的综合差额，覆盖更广口径。解读同结售汇差，但更接近「全口径」跨境资金压力。</p>
   <div class="card-foot">
     <span><span class="arrow down">▼ 下行</span> · 2026-03-31</span>
-    <span class="cadence">monthly</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -319,7 +283,7 @@
   <p class="card-desc">中国国际收支表中经常项目与资本和金融账户的关键差额（v1.7 抽出净误差与遗漏后只含正规账户）。顺差减小或转负即为正式跨境通道承压，链上稳定币可能成为补充性的非正规外溢出口。</p>
   <div class="card-foot">
     <span><span class="arrow flat">—</span> · 2025-12-31</span>
-    <span class="cadence">quarterly</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -332,7 +296,7 @@
   <p class="card-desc">传统热钱代理的两条口径融合——净误差与遗漏（E&amp;O）直接观测（Cuddington 1986 狭义法的 E&amp;O 分量）+ 外汇储备变化扣除贸易差额与对外投资剩余（World Bank 剩余法广义口径）。分位越高，越偏向非正规跨境外流压力上升，与稳定币替代地下钱庄 / 贸易伪报通道方向一致。</p>
   <div class="card-foot">
     <span><span class="arrow down">▼ 下行</span> · 2026-04-30</span>
-    <span class="cadence">monthly</span>
+    <span class="cadence">Supporting · Low</span>
   </div>
 </a>
 
@@ -344,9 +308,35 @@
     <h3 class="group-title">对照变量集
       <span class="group-subtitle">Conditioning Set</span>
     </h3>
-    <p class="group-lead">做残差化时控制的共同冲击对照变量，不进入 CSPI 主体——油价、黄金、央行流动性、年度校准锚。</p>
+    <p class="group-lead">做残差化时控制的共同冲击对照变量，不进入 CSPI 主体——全球美元压力、美债曲线、油价、黄金、央行流动性、年度校准锚。</p>
   </div>
   <div class="grid">
+
+<a class="card" href="/pillars/GlobalUSDStress_simple.html">
+  <div class="card-head">
+    <span class="pillar-name">全球美元流动性压力</span>
+    <span class="bin bin3">3 / 5（中位）</span>
+  </div>
+  <span class="pillar-key">GlobalUSDStress_simple</span>
+  <p class="card-desc">综合美元指数、TED 利差等观测全球美元紧绷程度。分位越高，美元越稀缺，新兴市场用稳定币囤美元的动机越强。</p>
+  <div class="card-foot">
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-12</span>
+    <span class="cadence">Control · Info</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/USYieldCurve.html">
+  <div class="card-head">
+    <span class="pillar-name">美债收益率曲线</span>
+    <span class="bin bin4">4 / 5</span>
+  </div>
+  <span class="pillar-key">USYieldCurve</span>
+  <p class="card-desc">用 2s10s 等期限利差描述美债曲线形态。曲线越异常（深度倒挂或骤陡），美元流动性环境越扰动，影响 USDT 套利与跨境配置。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-12</span>
+    <span class="cadence">Control · Info</span>
+  </div>
+</a>
 
 <a class="card" href="/pillars/OilStress.html">
   <div class="card-head">
@@ -356,8 +346,8 @@
   <span class="pillar-key">OilStress</span>
   <p class="card-desc">用油价水平与波动率刻画大宗商品端的外部冲击。油价剧烈波动期，跨境结算与大宗贸易场外结算（含 USDT）需求被放大。</p>
   <div class="card-foot">
-    <span><span class="arrow flat">— 持平</span> · 2026-05-11</span>
-    <span class="cadence">daily</span>
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-04</span>
+    <span class="cadence">Control · Info</span>
   </div>
 </a>
 
@@ -370,7 +360,7 @@
   <p class="card-desc">上海金相对伦敦金的人民币计价溢价。溢价上行意味着境内对硬通货避险需求升温，与稳定币需求同源。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Control · Info</span>
   </div>
 </a>
 
@@ -383,7 +373,7 @@
   <p class="card-desc">央行公开市场操作（OMO、MLF）的净投放方向。净回笼或紧平衡时，境内人民币偏紧，稳定币替代渠道活跃度上升。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-05-12</span>
-    <span class="cadence">daily</span>
+    <span class="cadence">Control · Info</span>
   </div>
 </a>
 
@@ -396,36 +386,13 @@
   <p class="card-desc">年度截面校准锚（年报、外储等慢速数据）。提供长期参照线，校正快频信号的水平偏移。</p>
   <div class="card-foot">
     <span><span class="arrow flat">—</span> · 2025-12-31</span>
-    <span class="cadence">annual benchmark</span>
+    <span class="cadence">Control · Info</span>
   </div>
 </a>
 
   </div>
 </section>
 
-
-<section class="pillar-group" id="group-other">
-  <div class="group-head">
-    <h3 class="group-title">其他<span class="group-subtitle">Other</span></h3>
-    <p class="group-lead">未列入主分组的分项（通常为新接入或实验性指标）。</p>
-  </div>
-  <div class="grid">
-
-<a class="card" href="/pillars/StockConnectFlow.html">
-  <div class="card-head">
-    <span class="pillar-name">StockConnectFlow</span>
-    <span class="bin none">—</span>
-  </div>
-  <span class="pillar-key">StockConnectFlow</span>
-  <p class="card-desc">沪深港通整体资金流（南向加北向）。与传统跨境通道对照，用于隔离稳定币独有的链上路径。（pillar 当前未渲染 — 等替代数据源, 见 cspi/compute/cspi_index.py:74-86 注释）</p>
-  <div class="card-foot">
-    <span><span class="arrow flat">—</span> · —</span>
-    <span class="cadence">daily</span>
-  </div>
-</a>
-
-  </div>
-</section>
 
 </section>
 

@@ -55,10 +55,12 @@
 
 <h3>标准化与合成</h3>
 <p>
-  每个 pillar 内部对其底层信号做 z-score 标准化（rolling 365d），再按
-  <code>data_quality</code> 加权聚合为该 pillar 的 <code>composite_z</code>。
-  首页"综合"为所有进入 CSPI 主体的 pillar 横向平均 z（cross-pillar mean）。
-  权重稳健性比较包括等权重、主成分、动态因子三种方案。
+  当前公开运行版为 <code>CSPI-v0</code>：
+  每个 pillar 内部对其底层信号做 z-score 标准化（rolling 365d），再以
+  <code>equal_weighted_v0</code> 聚合为该 pillar 的 <code>composite_z</code>。
+  首页 headline 只纳入通过支柱治理规则的非控制变量；
+  低样本事件证据、历史废弃支柱和对照变量不进入 headline。
+  动态权重、残差化质量权重、DFM 与 regime switching 属于后续 v1/v2 研究增强版。
 </p>
 
 <h3>事件验证</h3>
@@ -112,6 +114,8 @@
 <h3>方法学版本</h3>
 <p>
   当前方法学版本：<code>v1.7</code>（2026-05-16，新增四类信息分组与残差化步骤）。
+  当前指数实现：<code>CSPI-v0</code>（Equal-weighted monitoring index）。
+  标准化 pillar 监测原型；headline 仅纳入通过支柱治理规则的非控制变量，不解释为资本流动规模的结构性估计。
 </p>
 
 <footer>
