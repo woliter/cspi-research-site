@@ -35,13 +35,13 @@
       </div>
       <div class="composite-meta">
         方向 <span class="arrow down">▼ 下行</span> · 快照 2026-05-12（滞后 7 天）·
-        纳入 11 个 headline 支柱
+        纳入 12 个 headline 支柱
       </div>
       <p class="composite-desc">CSPI（China Stablecoin Penetration Index）测度的不是资本外流总额，而是由稳定币发行、离岸价差、中国关联链上活动、跨境桥接与传统跨境通道共同表征的中国关联稳定币资本流动压力。当前公开运行版为 CSPI-v0：以标准化 pillar 为基础，仅将通过样本量、信号数和元数据门控的非控制变量纳入 headline。VIX、DXY、全球美元压力等对照变量独立展示，用于解释与后续残差化，不直接贡献 headline。</p>
       <p class="validity-note"><strong>方法学边界：</strong>CSPI 的内容效度（content validity）：本指数关注「与传统美元流动性外溢可区分」的中国关联稳定币活动强度。当前 CSPI-v0 是等权监测原型，强调方向性压力和证据分层，不等同于全球加密市场风险情绪、广义美元流动性或资本流动规模估计。</p>
     </div>
     <div class="composite-hero-chart">
-      <img class="composite-spark" src="/charts/cspi_composite.png?v=1779155834" alt="CSPI 综合 z 分数走势">
+      <img class="composite-spark" src="/charts/cspi_composite.png?v=1779160099" alt="CSPI 综合 z 分数走势">
     </div>
   </div>
 </section>
@@ -70,15 +70,28 @@
   </div>
   <div class="grid">
 
+<a class="card" href="/pillars/GlobalStablecoinSupply.html">
+  <div class="card-head">
+    <span class="pillar-name">全球稳定币供给</span>
+    <span class="bin bin5">5 / 5（最高）</span>
+  </div>
+  <span class="pillar-key">GlobalStablecoinSupply</span>
+  <p class="card-desc">USDT、USDC、DAI、USDS、USDe、FDUSD、PYUSD、USD1、TUSD、RLUSD 等主流美元稳定币的合计市值供给。分位越高，代表全球链上美元供给越宽，CSPI 中作为稳定币流动性背景变量而非中国特定流向证据。</p>
+  <div class="card-foot">
+    <span><span class="arrow flat">— 持平</span> · 2026-05-12</span>
+    <span class="cadence">Supporting · Low</span>
+  </div>
+</a>
+
 <a class="card" href="/pillars/TetherIssuanceFlows.html">
   <div class="card-head">
     <span class="pillar-name">Tether 发行净流</span>
-    <span class="bin bin4">4 / 5</span>
+    <span class="bin bin1">1 / 5（最低）</span>
   </div>
   <span class="pillar-key">TetherIssuanceFlows</span>
   <p class="card-desc">USDT 全网发行（增发减赎回）的净额。大额净发行常伴随亚洲场外与 OTC 通道需求扩张。</p>
   <div class="card-foot">
-    <span><span class="arrow down">▼ 下行</span> · 2026-05-08</span>
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-12</span>
     <span class="cadence">Supporting · Low</span>
   </div>
 </a>
@@ -156,7 +169,7 @@
   <p class="card-desc">香港金管局口径的离岸人民币存款余额。存款大幅萎缩可能意味着资金离开 CNH 体系，转向稳定币或美元资产。</p>
   <div class="card-foot">
     <span><span class="arrow flat">— 持平</span> · 2026-03-31</span>
-    <span class="cadence">Supporting · Low</span>
+    <span class="cadence">Supporting · Medium</span>
   </div>
 </a>
 
@@ -187,7 +200,7 @@
 <a class="card" href="/pillars/CnAnchorAggregate.html">
   <div class="card-head">
     <span class="pillar-name">中国大陆相关地址综合活动</span>
-    <span class="bin bin4">4 / 5</span>
+    <span class="bin bin5">5 / 5（最高）</span>
   </div>
   <span class="pillar-key">CnAnchorAggregate</span>
   <p class="card-desc">由公开来源整理的多类中国关联链上地址聚类合成的综合活跃度。作为聚合统计指标使用，具体识别类别与启发式参数受知识产权保护、不公开；本指标不针对任何单一主体。</p>
@@ -225,12 +238,25 @@
 <a class="card card-highlight" href="/pillars/CnUsKycBridgeOutflow.html">
   <div class="card-head">
     <span class="pillar-name">中美 KYC 桥净流出<span class="card-badge">重点指标</span></span>
-    <span class="bin bin3">3 / 5（中位）</span>
+    <span class="bin bin4">4 / 5</span>
   </div>
   <span class="pillar-key">CnUsKycBridgeOutflow</span>
   <p class="card-desc">中国相关地址 → 美国合规交易所（Coinbase / Kraken / Gemini）的链上净流。净流出抬升是「通过链上把美元送入美国 KYC 体系」的最直接证据。</p>
   <div class="card-foot">
     <span><span class="arrow up">▲ 上行</span> · 2026-05-12</span>
+    <span class="cadence">Evidence · Low</span>
+  </div>
+</a>
+
+<a class="card" href="/pillars/CnUsKycBridgeInflow.html">
+  <div class="card-head">
+    <span class="pillar-name">中美 KYC 桥流入</span>
+    <span class="bin bin1">1 / 5（最低）</span>
+  </div>
+  <span class="pillar-key">CnUsKycBridgeInflow</span>
+  <p class="card-desc">美国合规交易所 → 中国相关地址的链上回流。持续抬升意味着美国 KYC 端反向供给境内地址，方向与外流相反。</p>
+  <div class="card-foot">
+    <span><span class="arrow down">▼ 下行</span> · 2026-05-12</span>
     <span class="cadence">Evidence · Low</span>
   </div>
 </a>
@@ -346,7 +372,7 @@
   <span class="pillar-key">OilStress</span>
   <p class="card-desc">用油价水平与波动率刻画大宗商品端的外部冲击。油价剧烈波动期，跨境结算与大宗贸易场外结算（含 USDT）需求被放大。</p>
   <div class="card-foot">
-    <span><span class="arrow down">▼ 下行</span> · 2026-05-04</span>
+    <span><span class="arrow flat">— 持平</span> · 2026-05-11</span>
     <span class="cadence">Control · Info</span>
   </div>
 </a>
