@@ -121,13 +121,32 @@ h3 { margin-top: 28px; font-weight: 600; }
     max-width: 520px;
 }
 .composite-hero-chart { text-align: right; }
-.composite-hero-chart img {
+.composite-hero-chart img,
+.pillar-chart {
     width: 100%;
     max-width: 540px;
     height: auto;
     border: 1px solid var(--border-soft);
     border-radius: 6px;
     background: #fff;
+}
+/* Click-to-enlarge: charts wrap in an <a> that opens the full-size PNG
+   in a new tab so the browser's native image viewer handles zoom. */
+.chart-zoomable {
+    display: inline-block;
+    cursor: zoom-in;
+    text-decoration: none;
+}
+.chart-zoomable img { transition: opacity 0.15s ease; }
+.chart-zoomable:hover img { opacity: 0.92; }
+.chart-zoomable::after {
+    content: "🔍 点击放大";
+    display: block;
+    font-size: 11px;
+    color: var(--soft);
+    text-align: center;
+    margin-top: 4px;
+    letter-spacing: 0.04em;
 }
 
 /* ===== Disclaimer ===== */
