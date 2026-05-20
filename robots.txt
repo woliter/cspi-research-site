@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://cspi-research.com/sitemap.xml
