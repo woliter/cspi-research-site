@@ -13,4 +13,4 @@ methodology archive §12.6 (academic publication track).
 The full methodology is described at `/methodology.html` once the site
 is deployed.
 
-— Wang Ren, 2026
+— CSPI Research Project, 2026
