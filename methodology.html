@@ -53,41 +53,93 @@
 </p>
 
 <h3>四类信息并行报告</h3>
-<p>评阅意见 [S1] 明确要求：CSPI 在指数构建中区分四类信息，分项指数与综合指数并行报告。</p>
+<p>评阅意见 [S1] 明确要求：CSPI 在指数构建中区分四类信息，分项指数与综合指数并行报告。
+当前注册表共 <strong>32 个活动支柱</strong>，分为五类信息组：</p>
 <ul>
-  <li><strong>一、全球供给</strong>：美元稳定币的源头产能、多发行人供给扩张与铸赎净流。
-    例：全球稳定币供给、Tether 发行净流、持牌稳定币流。</li>
-  <li><strong>二、离岸价格</strong>：人民币离岸/在岸价差、美元离岸借贷成本与境内场外报价。
-    例：CNH-CNY 偏离、CIP 基差、港 CNH 存款、USDT/CNY P2P 溢价。</li>
-  <li><strong>三、中国关联链上活动</strong>：基于公开地址聚类启发式的中国关联活跃度与全球链上份额。
-    以聚合统计指标为单位，不针对任何具体主体。</li>
-  <li><strong>四、跨境流向</strong>：稳定币跨境桥接（如中美 KYC 桥）与传统跨境通道
-    （南向通、结售汇、BoP）的资金流量对照。</li>
+  <li><strong>一、全球供给（global_stablecoin_liquidity）</strong>：美元稳定币的源头产能、
+    多发行人供给扩张与铸赎净流。
+    含 GlobalStablecoinSupply（USDT/USDC/DAI/USDS/USDe/FDUSD/PYUSD/USD1/TUSD/RLUSD
+    十发行人合计市值，CoinGecko 主源 + DeFiLlama 兜底）、TetherIssuanceFlows
+    （Tether Treasury 铸赎净流的高频领先信号）、LicensedStablecoinFlow
+    （HKMA 持牌发行人净发行）。</li>
+  <li><strong>二、离岸价格（offshore_price_pressure）</strong>：人民币离岸/在岸价差、
+    美元离岸借贷成本与境内场外报价。
+    含 RMBPressure（USDCNH 现货 + 1Y 远期 + USDCNY 中间价 + CFETS）、
+    OffshoreLiquidity（CNH HIBOR）、CipBasisFull / CipBasisProxy
+    （三国 + 中国 CIP basis）、CnhDepositsHk（香港 CNH 存款余额）。</li>
+  <li><strong>三、中国关联链上活动（cn_linked_onchain_activity）</strong>：
+    基于公开地址聚类启发式的中国关联活跃度与全球链上份额。
+    含 CnShareCombined（OpenCelliD + Cloudflare + 七麦三源融合），
+    及 10 个 Phase 2 anchor 驱动事件证据支柱（CnMiningPoolStress / Persistence /
+    CnExchangeLegacyOutflow / Dormancy / CnPropagationDailyFlow / 等）。
+    以聚合统计指标为单位，不针对任何具体主体，地址级数据不公开。</li>
+  <li><strong>四、跨境流向（crossborder_flow_evidence）</strong>：稳定币跨境桥接与传统
+    跨境通道的资金流量对照。
+    含 SouthboundFlow（港股通南向）、SafeForexBalance（外管局结售汇）、
+    ForexSettlement、BopFlows（季度 BoP）、HotMoneyResidual（剩余法热钱 +
+    净误差与遗漏混合）、CnUsKycBridgeOutflow / CnUsKycBridgeInflow
+    （中美 KYC 桥事件，机构层 settlement 观察，<em>非</em> retail capital
+    flight 解读）。</li>
+  <li><strong>五、对照变量集（controls）</strong>：GlobalUSDStress_simple、
+    USYieldCurve、OilStress、GoldPremium、PbcLiquidityOps、AnnualBenchmark。
+    用于残差化分离共同冲击，<em>不进入</em> CSPI 主体 headline。</li>
 </ul>
 
-<h3>对照变量残差化（区分渗透特定信息与共同冲击）</h3>
+<h3>支柱治理规则（v1.7）</h3>
 <p>
-  评阅意见 [S1] 关键步骤：在指数合成阶段，先以
-  <strong>VIX、DXY、加密市场总市值、TED 利差</strong>等做投影，
-  对残差再做因子提取，以分离"渗透特定"信息与全球美元流动性、加密市场风险情绪等共同冲击。
-  对照变量本身在网站上作为「对照变量集」独立分组展示，<em>不进入</em> CSPI 主体。
+  v1.7 把"所有 pillar 的等权监测表"与"可公开解释的 headline 指数"明确分开。
+  <code>cspi_index</code> 表保留全部 32 个 pillar 的标准化监测值用于诊断 / 回测 /
+  研究；CSPI-v0 headline 经过以下 7 步门控才纳入：
+</p>
+<ol>
+  <li>已废弃支柱（如 StockConnectFlow，因 Wind+HKEX 上游 2024-08 停发）→ 不进 headline；</li>
+  <li>metadata 缺失 → 视作 event_evidence，不进 headline；</li>
+  <li><code>role == control</code> → 仅作残差化对照，不进 headline；</li>
+  <li><code>role == event_evidence</code>（如所有 Phase 2 anchor 支柱）→ 仅作事件证据，
+    不进 headline；</li>
+  <li><code>n_obs &lt; 30</code> 硬门槛 → 样本不足，降为 event_evidence；</li>
+  <li><code>n_obs &lt; min_headline_obs</code>（默认 180）或 <code>n_signals ≤ 1</code> 或
+    <code>role == headline_supporting</code> → 以基础权重 × 0.35 的降权进入 headline；</li>
+  <li>其余 → 以完整基础权重进入 headline。</li>
+</ol>
+<p>
+  该规则在每个历史日期都重新评估（<strong>ex-ante 分类</strong>，2026-05-20
+  审查 P0#3 修复）：不会用今天的 n_obs 反推过去的状态。
+</p>
+
+<h3>残差化诊断（CSPI-v1 原型）</h3>
+<p>
+  对照变量集（GlobalUSDStress_simple / USYieldCurve / OilStress / GoldPremium /
+  PbcLiquidityOps，5 项非年频 control）用 OLS 投影出共同冲击成分，
+  对每个 headline pillar 残差化后再按 headline 权重归一，得到
+  <code>residualized_headline_z</code> 诊断量。残差标准差使用
+  <strong>OLS (n−p) 自由度</strong>修正（2026-05-20 审查 P0#2 修复），
+  分母再叠加预测区间 SE 以反映参数估计不确定性。
+  该层只写诊断文件 <code>output/diagnostics/</code>，不写入数据库，
+  也不替代公开 CSPI-v0 headline；属于 CSPI-v1 研究增强原型。
 </p>
 
 <h3>标准化与合成</h3>
 <p>
-  当前公开运行版为 <code>CSPI-v0</code>：
-  每个 pillar 内部对其底层信号做 z-score 标准化（rolling 365d），再以
-  <code>equal_weighted_v0</code> 聚合为该 pillar 的 <code>composite_z</code>。
-  首页 headline 只纳入通过支柱治理规则的非控制变量；
-  低样本事件证据、历史废弃支柱和对照变量不进入 headline。
-  动态权重、残差化质量权重、DFM 与 regime switching 属于后续 v1/v2 研究增强版。
+  当前公开运行版为 <code>CSPI-v0</code>：每个 pillar
+  内部对其底层信号做 <strong>expanding-window z-score 标准化</strong>
+  （2026-05-20 审查 P0#1 修复：每个观察 t 的 mu / sigma / 1-99 percentile
+  仅用 [t_0, t] 区间，<em>不</em>包含未来信息；这是 IMF FSI、Hatzius FCI、
+  ECB CISS 等公开金融压力指数的标准做法，可保证历史 z 不随今日数据变化）。
+  pillar 内多源信号以 <code>equal_weighted_v0</code> 聚合为 <code>composite_z</code>。
+  跨 pillar headline 序列再做<strong> forward-fill 跨频率拼接</strong>：
+  日频、月频、季频支柱的最新 z 沿日历前推到下一个观察日，避免低频支柱
+  在月末当日"突然入分母"造成 headline 尖峰。
 </p>
 
 <h3>事件验证</h3>
 <p>
   在 USDC 脱锚（2023-03）、Tornado Cash 制裁（2022-08）、
+  中国 9.24 加密禁令（2021-09）、LUNA/UST 崩盘（2022-05）、
   GENIUS Act 通过（2025）等关键事件窗口对 CSPI 进行可解释响应检验，
   并对 OTC 溢价异常、CNH-CNY 价差波动、跨境桥接流量突变做交叉验证。
+  事件 study、placebo、leave-one-pillar-out 等系统性 robustness 实验属于
+  论文阶段工作，参见研究 backlog。
 </p>
 
 
@@ -133,9 +185,14 @@
 
 <h3>方法学版本</h3>
 <p>
-  当前方法学版本：<code>v1.7</code>（2026-05-16，新增四类信息分组与残差化步骤）。
-  当前指数实现：<code>CSPI-v0</code>（Equal-weighted monitoring index）。
+  当前方法学版本：<code>v1.7</code>
+  （2026-05-20）。
+  当前指数实现：<code>CSPI-v0</code>
+  （Equal-weighted monitoring index）。
   标准化 pillar 监测原型；headline 仅纳入通过支柱治理规则的非控制变量，不解释为资本流动规模的结构性估计。
+</p>
+<p class="note-small">
+  版本说明：v1.7 指数治理增补（2026-05-19）+ 审查 P0 修复（2026-05-20）：expanding window 标准化（无前视）、headline 历史每日 ex-ante 分类 + forward-fill 跨频率、残差化 OLS 自由度 (n-p) 修正、GlobalStablecoinSupply 多发行人聚合替代 USDT-only
 </p>
 
 <footer>
