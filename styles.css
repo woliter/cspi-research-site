@@ -120,6 +120,24 @@ h3 { margin-top: 28px; font-weight: 600; }
     margin: 0;
     max-width: 520px;
 }
+.composite-hero.experimental {
+    background: #fbfaf5;
+    border-style: dashed;
+    border-color: #d9c98f;
+}
+.exp-badge {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8a6d1b;
+    background: #f3ead0;
+    border: 1px solid #e2d29a;
+    border-radius: 999px;
+    padding: 3px 10px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+}
 .composite-hero-chart { text-align: right; }
 .composite-hero-chart img,
 .pillar-chart {
