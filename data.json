@@ -1,6 +1,6 @@
 {
-  "snapshot_date": "2026-06-01",
-  "generated_at_utc": "2026-06-08T01:37:14Z",
+  "snapshot_date": "2026-06-05",
+  "generated_at_utc": "2026-06-12T09:37:29Z",
   "methodology_version": "v1.8",
   "index_version": "CSPI-v0",
   "index_method": "Equal-weighted monitoring index (mature-macro headline)",
@@ -11,15 +11,15 @@
     "n_bins": 5
   },
   "composite": {
-    "bin": "Bin 4/5",
+    "bin": "Bin 5/5",
     "direction": "上行",
     "headline_pillar_count": 12,
     "headline_layer": "mature_macro",
     "headline_rule": "quality-gated non-control mature_macro pillars only"
   },
   "experimental_on_chain": {
-    "bin": "Bin 4/5",
-    "direction": "上行",
+    "bin": "Bin 3/5",
+    "direction": "持平",
     "pillar_count": 2,
     "confidence_level": "Low",
     "in_published_headline": false,
@@ -34,9 +34,9 @@
       "headline_status": "supporting",
       "confidence_level": "Low",
       "headline_weight": 0.035,
-      "n_obs": 2821,
+      "n_obs": 2825,
       "latest_n_signals": 1,
-      "latest_date": "2026-06-01",
+      "latest_date": "2026-06-05",
       "latest_bin": "Bin 3/5",
       "direction": "持平",
       "has_data": true
@@ -49,10 +49,10 @@
       "headline_status": "supporting",
       "confidence_level": "Low",
       "headline_weight": 0.0525,
-      "n_obs": 505,
+      "n_obs": 508,
       "latest_n_signals": 1,
-      "latest_date": "2026-05-31",
-      "latest_bin": "Bin 1/5",
+      "latest_date": "2026-06-04",
+      "latest_bin": "Bin 2/5",
       "direction": "下行",
       "has_data": true
     },
@@ -83,7 +83,7 @@
       "latest_n_signals": 1,
       "latest_date": "2026-05-29",
       "latest_bin": "Bin 1/5",
-      "direction": "持平",
+      "direction": "下行",
       "has_data": true
     },
     {
@@ -109,11 +109,11 @@
       "headline_status": "supporting",
       "confidence_level": "Low",
       "headline_weight": 0.0175,
-      "n_obs": 5995,
+      "n_obs": 5996,
       "latest_n_signals": 1,
-      "latest_date": "2026-06-01",
+      "latest_date": "2026-06-02",
       "latest_bin": "Bin 1/5",
-      "direction": "下行",
+      "direction": "持平",
       "has_data": true
     },
     {
@@ -127,7 +127,7 @@
       "n_obs": 267,
       "latest_n_signals": 1,
       "latest_date": "2026-04-30",
-      "latest_bin": "Bin 3/5",
+      "latest_bin": "Bin 2/5",
       "direction": "下行",
       "has_data": true
     },
@@ -154,10 +154,40 @@
       "headline_status": "event_evidence",
       "confidence_level": "Low",
       "headline_weight": 0.0,
-      "n_obs": 1642,
+      "n_obs": 1646,
       "latest_n_signals": 1,
-      "latest_date": "2026-06-01",
+      "latest_date": "2026-06-05",
       "latest_bin": "Bin 5/5",
+      "direction": "上行",
+      "has_data": true
+    },
+    {
+      "key": "CnFlowShareProb",
+      "name_cn": "CnFlowShareProb",
+      "cadence": "daily",
+      "information_group": "cn_linked_onchain_activity",
+      "headline_status": "event_evidence",
+      "confidence_level": "Low",
+      "headline_weight": 0.0,
+      "n_obs": 1673,
+      "latest_n_signals": 1,
+      "latest_date": "2026-06-05",
+      "latest_bin": "Bin 1/5",
+      "direction": "上行",
+      "has_data": true
+    },
+    {
+      "key": "CnNetFlowProb",
+      "name_cn": "CnNetFlowProb",
+      "cadence": "daily",
+      "information_group": "cn_linked_onchain_activity",
+      "headline_status": "event_evidence",
+      "confidence_level": "Low",
+      "headline_weight": 0.0,
+      "n_obs": 1673,
+      "latest_n_signals": 1,
+      "latest_date": "2026-06-05",
+      "latest_bin": "Bin 3/5",
       "direction": "上行",
       "has_data": true
     },
@@ -244,9 +274,9 @@
       "headline_status": "supporting",
       "confidence_level": "Low",
       "headline_weight": 0.028,
-      "n_obs": 257,
+      "n_obs": 261,
       "latest_n_signals": 1,
-      "latest_date": "2026-06-01",
+      "latest_date": "2026-06-05",
       "latest_bin": "Bin 2/5",
       "direction": "持平",
       "has_data": true
@@ -259,11 +289,11 @@
       "headline_status": "supporting",
       "confidence_level": "Low",
       "headline_weight": 0.014,
-      "n_obs": 141,
+      "n_obs": 145,
       "latest_n_signals": 1,
-      "latest_date": "2026-06-01",
+      "latest_date": "2026-06-05",
       "latest_bin": "Bin 5/5",
-      "direction": "上行",
+      "direction": "下行",
       "has_data": true
     },
     {
@@ -274,11 +304,11 @@
       "headline_status": "control",
       "confidence_level": "Info",
       "headline_weight": 0.0,
-      "n_obs": 9286,
+      "n_obs": 9290,
       "latest_n_signals": 1,
-      "latest_date": "2026-05-29",
-      "latest_bin": "Bin 2/5",
-      "direction": "下行",
+      "latest_date": "2026-06-04",
+      "latest_bin": "Bin 4/5",
+      "direction": "上行",
       "has_data": true
     },
     {
@@ -323,7 +353,7 @@
       "latest_n_signals": 2,
       "latest_date": "2026-05-29",
       "latest_bin": "Bin 5/5",
-      "direction": "持平",
+      "direction": "上行",
       "has_data": true
     },
     {
@@ -366,9 +396,9 @@
       "headline_weight": 0.0,
       "n_obs": 0,
       "latest_n_signals": 0,
-      "latest_date": "2026-06-01",
-      "latest_bin": "Bin 4/5",
-      "direction": "下行",
+      "latest_date": "2026-06-05",
+      "latest_bin": "Bin 5/5",
+      "direction": "上行",
       "has_data": true
     }
   ],
