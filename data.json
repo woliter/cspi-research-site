@@ -1,6 +1,6 @@
 {
   "snapshot_date": "2026-06-22",
-  "generated_at_utc": "2026-06-29T06:53:52Z",
+  "generated_at_utc": "2026-06-29T07:26:51Z",
   "methodology_version": "v2.0",
   "index_version": "CSPI-v0",
   "index_method": "Equal-weighted monitoring index (mature-macro headline)",
@@ -20,7 +20,7 @@
   "experimental_on_chain": {
     "bin": "Bin 5/5",
     "direction": "上行",
-    "pillar_count": 2,
+    "pillar_count": 3,
     "confidence_level": "Low",
     "in_published_headline": false,
     "note": "Experimental on-chain attribution layer. Reported separately, never folded into the published composite. Pending attribution validation (recall@threshold, decoy precision, orthogonality)."
@@ -119,7 +119,7 @@
     {
       "key": "CnhDepositsHk",
       "name_cn": "港 CNH 存款",
-      "cadence": "monthly",
+      "cadence": "monthly (lagged release)",
       "information_group": "offshore_price_pressure",
       "headline_status": "supporting",
       "confidence_level": "Medium",
@@ -136,14 +136,14 @@
       "name_cn": "在华份额合成",
       "cadence": "daily",
       "information_group": "cn_linked_onchain_activity",
-      "headline_status": "event_evidence",
+      "headline_status": "supporting",
       "confidence_level": "Low",
-      "headline_weight": 0.0,
-      "n_obs": 29,
+      "headline_weight": 0.35,
+      "n_obs": 51,
       "latest_n_signals": 1,
-      "latest_date": "2026-05-08",
-      "latest_bin": "Bin 5/5",
-      "direction": "上行",
+      "latest_date": "2026-06-22",
+      "latest_bin": "Bin 4/5",
+      "direction": "下行",
       "has_data": true
     },
     {
@@ -274,10 +274,10 @@
       "headline_status": "supporting",
       "confidence_level": "Low",
       "headline_weight": 0.175,
-      "n_obs": 291,
+      "n_obs": 2240,
       "latest_n_signals": 1,
-      "latest_date": "2026-06-18",
-      "latest_bin": "Bin 3/5",
+      "latest_date": "2026-06-22",
+      "latest_bin": "Bin 1/5",
       "direction": "持平",
       "has_data": true
     },
@@ -289,9 +289,9 @@
       "headline_status": "supporting",
       "confidence_level": "Low",
       "headline_weight": 0.175,
-      "n_obs": 266,
+      "n_obs": 2549,
       "latest_n_signals": 1,
-      "latest_date": "2026-06-19",
+      "latest_date": "2026-06-22",
       "latest_bin": "Bin 5/5",
       "direction": "持平",
       "has_data": true
