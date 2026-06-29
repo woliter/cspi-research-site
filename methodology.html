@@ -185,19 +185,19 @@
 
 <h3>方法学版本</h3>
 <p>
-  当前方法学版本：<code>v1.8</code>
-  （2026-05-29）。
+  当前方法学版本：<code>v2.0</code>
+  （2026-06-29）。
   当前指数实现：<code>CSPI-v0</code>
   （Equal-weighted monitoring index (mature-macro headline)）。
   标准化 pillar 监测原型；对外发布的主指数（headline）由通过支柱治理规则的成熟宏观层非控制变量合成；链上中国归因研究层与之并行报告。整体不解释为资本流动规模的结构性估计。
 </p>
 <p class="note-small">
-  版本说明：v1.8 名实对齐与最小验证（2026-05-29）：headline 拆分为成熟宏观层（mature_macro，对外发布的主指数）与链上中国归因研究层（on-chain attribution，与宏观主指数并行报告，验证体系 recall@阈值 / 诱饵 precision / 与宏观层正交性持续完善）；锚点去循环（标注 inferred 来源 + 排除 inferred 敏感性）。承接 v1.7（2026-05-20）：expanding window 标准化（无前视）、headline 历史每日 ex-ante 分类 + forward-fill 跨频率、残差化 OLS 自由度 (n-p) 修正、GlobalStablecoinSupply 多发行人聚合替代 USDT-only。
+  版本说明：v2.0 review alignment: mature_macro remains the published headline; experimental_on_chain is reported separately, capped Low confidence, and kept out of the headline until independent ground-truth attribution validation supports calibration. Weighting uses principled layer/group equal-risk rules; ChineseScore remains an ordinal ranking, not P(China).
 </p>
 
 <footer>
   <p class="footer-notice">本平台输出仅用于学术研究与方法学展示，不构成对任何具体主体的监测、监管建议或投资建议。所有链上识别均以公开地址聚类与启发式为基础，以聚合统计指标为单位，不公开任何单一主体级别的判定。</p>
-  <p>数据快照：2026-06-15（较内部数据滞后 7 天） ·
+  <p>数据快照：2026-06-22（较内部数据滞后 7 天） ·
     已按学术发布规约施加 ±5% 噪声 + 5 分位离散化（§12.6 三轨发布）</p>
   <p>CSPI Research · 独立学术研究项目 ·
     代码私有 · 数据为研究用途，不构成投资、交易、监管或法律建议</p>
