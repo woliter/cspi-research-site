@@ -85,10 +85,11 @@
     用于残差化分离共同冲击，<em>不进入</em> CSPI 主体 headline。</li>
 </ul>
 
-<h3>支柱治理规则（v1.7）</h3>
+<h3>支柱治理规则（v2.0）</h3>
 <p>
-  v1.7 把"所有 pillar 的等权监测表"与"可公开解释的 headline 指数"明确分开。
-  <code>cspi_index</code> 表保留全部 32 个 pillar 的标准化监测值用于诊断 / 回测 /
+  治理层把"所有 pillar 的监测表"与"可公开解释的 headline 指数"明确分开。
+  <code>cspi_index</code> 表保留全部 35 个 pillar 的标准化监测值
+  用于诊断 / 回测 /
   研究；CSPI-v0 headline 经过以下 7 步门控才纳入：
 </p>
 <ol>
@@ -134,12 +135,17 @@
 
 <h3>事件验证</h3>
 <p>
-  在 USDC 脱锚（2023-03）、Tornado Cash 制裁（2022-08）、
-  中国 9.24 加密禁令（2021-09）、LUNA/UST 崩盘（2022-05）、
-  GENIUS Act 通过（2025）等关键事件窗口对 CSPI 进行可解释响应检验，
-  并对 OTC 溢价异常、CNH-CNY 价差波动、跨境桥接流量突变做交叉验证。
-  事件 study、placebo、leave-one-pillar-out 等系统性 robustness 实验属于
-  论文阶段工作，参见研究 backlog。
+  <!-- review 2026-08-30 fix H16: the old text advertised event-window
+       validation as done and deferred leave-one-pillar-out to "paper stage",
+       but LOO / weight-perturbation MC / block-bootstrap ARE implemented in
+       validate/robustness.py, while the event-window study is NOT. State what
+       actually runs. -->
+  <strong>已实现</strong>（<code>cspi validate-robustness</code>）：
+  leave-one-pillar-out 逐支柱剔除、±25% 权重扰动 Monte-Carlo（含符号翻转率）、
+  以及对 headline 时间序列的 Künsch 移动块 bootstrap 置信区间。
+  <strong>尚未实现</strong>：事件窗口 event study 与 placebo 检验——
+  USDC 脱锚、Tornado Cash 制裁、9.24 禁令、LUNA/UST、GENIUS Act 等事件
+  目前仅用于<em>定性</em>解读，尚无系统化的事件响应统计检验，属研究 backlog。
 </p>
 
 
@@ -152,8 +158,9 @@
   <li><strong>变量类别</strong>：四类信息分组与每个分项的口径定义；</li>
   <li><strong>数据来源类型</strong>：宏观（Wind/FRED/IMF/BIS/CEIC）、链上
     （公开节点 + Bitquery 等可订阅源）、官方与监管公开数据；</li>
-  <li><strong>合成方法</strong>：z-score 滚动标准化（365d）、动态因子提取、
-    等权重 / 主成分 / 滚动窗口三种权重比较；</li>
+  <li><strong>合成方法</strong>：z-score <em>扩窗</em>标准化（expanding，
+    仅用 t 时点及之前数据，历史 z 不随新数据变化）、动态因子提取（诊断用）、
+    层级等风险权重（每个信息组等权，组内等权）；</li>
   <li><strong>验证标准</strong>：脱锚事件、监管事件、OTC 溢价异常、
     CNH-CNY 价差波动、跨境桥接流量突变等事件窗口的可解释响应；</li>
   <li><strong>残差化步骤</strong>：先以 VIX、DXY、加密市场总市值、
@@ -197,7 +204,7 @@
 
 <footer>
   <p class="footer-notice">本平台输出仅用于学术研究与方法学展示，不构成对任何具体主体的监测、监管建议或投资建议。所有链上识别均以公开地址聚类与启发式为基础，以聚合统计指标为单位，不公开任何单一主体级别的判定。</p>
-  <p>数据快照：2026-08-22（较内部数据滞后 7 天） ·
+  <p>数据快照：2026-08-23（较内部数据滞后 7 天） ·
     已按学术发布规约施加 ±5% 噪声 + 5 分位离散化（§12.6 三轨发布）</p>
   <p>CSPI Research · 独立学术研究项目 ·
     代码私有 · 数据为研究用途，不构成投资、交易、监管或法律建议</p>
