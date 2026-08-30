@@ -85,10 +85,10 @@
     用于残差化分离共同冲击，<em>不进入</em> CSPI 主体 headline。</li>
 </ul>
 
-<h3>支柱治理规则（v2.0）</h3>
+<h3>支柱治理规则（v2.1）</h3>
 <p>
   治理层把"所有 pillar 的监测表"与"可公开解释的 headline 指数"明确分开。
-  <code>cspi_index</code> 表保留全部 35 个 pillar 的标准化监测值
+  <code>cspi_index</code> 表保留全部 36 个 pillar 的标准化监测值
   用于诊断 / 回测 /
   研究；CSPI-v0 headline 经过以下 7 步门控才纳入：
 </p>
@@ -122,12 +122,33 @@
 
 <h3>标准化与合成</h3>
 <p>
-  当前公开运行版为 <code>CSPI-v0</code>：每个 pillar
-  内部对其底层信号做 <strong>expanding-window z-score 标准化</strong>
+  当前公开运行版为 <code>CSPI-v0</code>。
+  <strong>第一步是按序列声明的平稳性变换</strong>（2026-08-30 起）：
+  随所测市场规模一起增长的<strong>存量</strong>序列先转成
+  <strong>对数增长率</strong>再标准化——港离岸人民币存款余额、
+  全球美元稳定币流通市值均取相邻观测的对数增速。
+  这是因为对趋势性存量做扩窗 z，得到的是「今天在自身历史里的位置」而不是
+  「今天有多大压力」——修正前这两根支柱的 z 在近两年分别 100% 为负、100% 为正，
+  实际起的是常数水平位移的作用；改用增长率后，
+  港存款支柱的一阶差分/水平标准差比由 0.176 升至 <strong>1.441</strong>
+  （白噪声约 1.414）、近两年正值占比由 100% 回到 <strong>52%</strong>。
+  存款余额的月度环比仍含春节/年末季节性（未做季节调整），
+  这是一个有界的已知局限——它替换掉的水平趋势是无界的。
+  <strong>价格、利率、利差保留水平口径</strong>：汇率水平本身携带贬值压力信息
+  （7.3 与 6.4 不是同一个陈述），利差经济上是价差；
+  但也如实声明——这些序列的扩窗 z 仍含趋势成分，是否改口径属独立的方法学决策。
+</p>
+<p>
+  第二步，每个 pillar 内部对（变换后的）底层信号做
+  <strong>expanding-window z-score 标准化</strong>
   （2026-05-20 审查 P0#1 修复：每个观察 t 的 mu / sigma / 1-99 percentile
   仅用 [t_0, t] 区间，<em>不</em>包含未来信息；这是 IMF FSI、Hatzius FCI、
   ECB CISS 等公开金融压力指数的标准做法，可保证历史 z 不随今日数据变化）。
-  pillar 内多源信号以 <code>equal_weighted_v0</code> 聚合为 <code>composite_z</code>。
+  pillar 内多源信号以 <code>equal_weighted_v0</code> 聚合为 <code>composite_z</code>，
+  且自 2026-08-30 起在 pillar 的日期网格上做 <strong>as-of 对齐</strong>：
+  取每个成分「当天或之前最近一次」观测（严格后视，不引入前视），
+  并在陈旧度超过按数据发布节奏派生的上限后把该成分剔除。
+  此前按精确日期分组，成分会随发布日历跳进跳出，支柱等于逐日更换篮子。
   跨 pillar headline 序列再做<strong> forward-fill 跨频率拼接</strong>：
   日频、月频、季频支柱的最新 z 沿日历前推到下一个观察日，避免低频支柱
   在月末当日"突然入分母"造成 headline 尖峰。
@@ -158,9 +179,10 @@
   <li><strong>变量类别</strong>：四类信息分组与每个分项的口径定义；</li>
   <li><strong>数据来源类型</strong>：宏观（Wind/FRED/IMF/BIS/CEIC）、链上
     （公开节点 + Bitquery 等可订阅源）、官方与监管公开数据；</li>
-  <li><strong>合成方法</strong>：z-score <em>扩窗</em>标准化（expanding，
-    仅用 t 时点及之前数据，历史 z 不随新数据变化）、动态因子提取（诊断用）、
-    层级等风险权重（每个信息组等权，组内等权）；</li>
+  <li><strong>合成方法</strong>：<em>平稳性变换</em>（按序列声明 level / dlog /
+    同比，见下）→ z-score <em>扩窗</em>标准化（expanding，仅用 t 时点及之前数据，
+    历史 z 不随新数据变化）→ 层级风险平价权重（每个信息组等权，<em>组内按逆波动</em>）；
+    另有动态因子提取（诊断用）；</li>
   <li><strong>验证标准</strong>：脱锚事件、监管事件、OTC 溢价异常、
     CNH-CNY 价差波动、跨境桥接流量突变等事件窗口的可解释响应；</li>
   <li><strong>残差化步骤</strong>：先以 VIX、DXY、加密市场总市值、
@@ -192,7 +214,7 @@
 
 <h3>方法学版本</h3>
 <p>
-  当前方法学版本：<code>v2.0</code>
+  当前方法学版本：<code>v2.1</code>
   （2026-06-29）。
   当前指数实现：<code>CSPI-v0</code>
   （Equal-weighted monitoring index (mature-macro headline)）。
