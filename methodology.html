@@ -6,20 +6,20 @@
 <meta name="generator" content="cspi-system static-site (academic-version)">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <title>方法学｜稳定币跨境渗透综合识别指数（CSPI）</title>
-<meta name="description" content="稳定币跨境渗透综合识别指数（CSPI）方法学：指数构建、支柱治理（CSPI-v0 质量门控规则）、加噪与 5 分位离散化、CSPI-v1 残差化诊断原型的完整技术口径。包含 32 个支柱的信号方向与权重。">
-<meta name="keywords" content="稳定币跨境渗透综合识别指数,CSPI,China Stablecoin Penetration Index,稳定币,USDT,USDC,跨境资本流动,人民币离岸压力,CIP 基差,Tether 铸赎,中美 KYC 桥,外汇管理,SAFE,HKMA,链上证据,RMBPressure,Phase 2 anchor,方法学,CSPI-v0,CSPI-v1,残差化">
+<meta name="description" content="稳定币跨境渗透综合识别指数（CSPI）方法学：指数构建、支柱治理（CSPI-v0 质量门控规则）、加噪与 5 分位离散化、CSPI-v1 残差化诊断原型的技术口径，区分已实现、待验证与缺失输入。">
+<meta name="keywords" content="稳定币跨境渗透综合识别指数,CSPI,China Stablecoin Penetration Index,稳定币,USDT,USDC,跨境资本流动,人民币离岸压力,CIP 基差,Tether 国库转账,中美 KYC 桥,外汇管理,SAFE,HKMA,链上证据,RMBPressure,Phase 2 anchor,方法学,CSPI-v0,CSPI-v1,残差化">
 <meta name="author" content="CSPI 研究项目">
 <link rel="canonical" href="https://cspi-research.com/methodology.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="稳定币跨境渗透综合识别指数（CSPI）">
 <meta property="og:title" content="方法学｜稳定币跨境渗透综合识别指数（CSPI）">
-<meta property="og:description" content="稳定币跨境渗透综合识别指数（CSPI）方法学：指数构建、支柱治理（CSPI-v0 质量门控规则）、加噪与 5 分位离散化、CSPI-v1 残差化诊断原型的完整技术口径。包含 32 个支柱的信号方向与权重。">
+<meta property="og:description" content="稳定币跨境渗透综合识别指数（CSPI）方法学：指数构建、支柱治理（CSPI-v0 质量门控规则）、加噪与 5 分位离散化、CSPI-v1 残差化诊断原型的技术口径，区分已实现、待验证与缺失输入。">
 <meta property="og:url" content="https://cspi-research.com/methodology.html">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="方法学｜稳定币跨境渗透综合识别指数（CSPI）">
-<meta name="twitter:description" content="稳定币跨境渗透综合识别指数（CSPI）方法学：指数构建、支柱治理（CSPI-v0 质量门控规则）、加噪与 5 分位离散化、CSPI-v1 残差化诊断原型的完整技术口径。包含 32 个支柱的信号方向与权重。">
+<meta name="twitter:description" content="稳定币跨境渗透综合识别指数（CSPI）方法学：指数构建、支柱治理（CSPI-v0 质量门控规则）、加噪与 5 分位离散化、CSPI-v1 残差化诊断原型的技术口径，区分已实现、待验证与缺失输入。">
 <meta name="application-name" content="稳定币跨境渗透综合识别指数（CSPI）">
 <meta name="apple-mobile-web-app-title" content="CSPI">
 <meta http-equiv="content-language" content="zh-CN">
@@ -34,8 +34,8 @@
     <h1><a href="/" style="color:inherit;text-decoration:none"
       >CSPI · 稳定币跨境渗透综合识别指数</a></h1>
     <nav>
-      <a href="/">综合 + 分项</a>
-      <a href="/flow/">资金流向</a>
+      <a href="/">研究进度</a>
+      <a href="/flow/">流向研究</a>
       <a href="/methodology.html">方法学</a>
       <a href="/about.html">关于</a>
       <a href="/data.json">data.json</a>
@@ -46,21 +46,24 @@
 
 <h2>方法学概要</h2>
 <p>
-  CSPI（China Stablecoin Penetration Index，稳定币跨境渗透综合识别指数）测度的不是
-  抽象意义上的"跨境渗透"，而是
-  <strong>由稳定币发行、离岸价差、锚点行为、跨境桥接与境内关联活动共同表征、
-  与传统美元流动性外溢可区分的中国关联稳定币活动强度</strong>。
+  CSPI 的两个核心目标是<strong>中国内地居民与机构稳定币渗透程度</strong>与<strong>中国内地居民与机构跨境稳定币资金流向</strong>，目前均尚未通过识别验收。
+  <strong>宏观环境子指数</strong>提供背景，<strong>尚待校准的链上归因研究层</strong>提供研究支持；二者均不替代目标估计。
+</p>
+<p>
+  核心总体明确为中国内地居民与机构，识别实际使用必须取得独立地域或居住地证据。交易所的中国关联背景、机构地址标签及全球客户活动均不能直接转换为内地居民归属。
+  “中国相关实体在全球稳定币样本中的活动份额”与“内地居民与机构的稳定币使用渗透率”是不同的估计对象，后者还缺少合适的经济活动分母。
+  跨境方向需要独立核实交易双方的内地或境外归属，去除内部划转与跨链重复；地址间或链间转移本身不能证明内地与境外之间的资金流动。
 </p>
 
 <h3>四类信息并行报告</h3>
 <p>评阅意见 [S1] 明确要求：CSPI 在指数构建中区分四类信息，分项指数与综合指数并行报告。
-当前注册表共 <strong>32 个活动支柱</strong>，分为五类信息组：</p>
+计算定义当前登记 <strong>36 个分项</strong>（包含内部研究项），分为五类信息组。登记不等于已取得有效数据；实际覆盖见首页：</p>
 <ul>
   <li><strong>一、全球供给（global_stablecoin_liquidity）</strong>：美元稳定币的源头产能、
     多发行人供给扩张与铸赎净流。
     含 GlobalStablecoinSupply（USDT/USDC/DAI/USDS/USDe/FDUSD/PYUSD/USD1/TUSD/RLUSD
     十发行人合计市值，CoinGecko 主源 + DeFiLlama 兜底）、TetherIssuanceFlows
-    （Tether Treasury 铸赎净流的高频领先信号）、LicensedStablecoinFlow
+    （配置国库钱包集合与外部转账的观测代理，不代表铸赎或全球净新增发行）、LicensedStablecoinFlow
     （HKMA 持牌发行人净发行）。</li>
   <li><strong>二、离岸价格（offshore_price_pressure）</strong>：人民币离岸/在岸价差、
     美元离岸借贷成本与境内场外报价。
@@ -68,29 +71,28 @@
     OffshoreLiquidity（CNH HIBOR）、CipBasisFull / CipBasisProxy
     （三国 + 中国 CIP basis）、CnhDepositsHk（香港 CNH 存款余额）。</li>
   <li><strong>三、中国关联链上活动（cn_linked_onchain_activity）</strong>：
-    基于公开地址聚类启发式的中国关联活跃度与全球链上份额。
-    含 CnShareCombined（OpenCelliD + Cloudflare + 七麦三源融合）及若干 anchor
+    启发式中国关联地址样本活动与网络应用代理；尚未识别总体份额。
+    含 CnShareCombined（网络与应用代理，口径待重构，不参与实验层汇总）及若干 anchor
     驱动事件证据支柱（具体形式与命名属于待申请专利范围，公开站点仅以聚合
-    指标「中国相关链上活动合成」展示，<em>不</em>暴露各支柱细节、不暴露
+    指标「中国关联地址样本活动（实验）」展示，<em>不</em>暴露各支柱细节、不暴露
     地址级数据、不针对任何具体主体）。</li>
-  <li><strong>四、跨境流向（crossborder_flow_evidence）</strong>：稳定币跨境桥接与传统
-    跨境通道的资金流量对照。
+  <li><strong>四、跨境流向研究（crossborder_flow_evidence）</strong>：样本转账方向代理与传统
+    跨境通道背景，尚不构成已识别的稳定币跨境净流量。
     含 SouthboundFlow（港股通南向）、SafeForexBalance（外管局结售汇）、
-    ForexSettlement、BopFlows（季度 BoP）、HotMoneyResidual（剩余法热钱 +
-    净误差与遗漏混合）、CnUsKycBridgeOutflow / CnUsKycBridgeInflow
-    （中美 KYC 桥事件，机构层 settlement 观察，<em>非</em> retail capital
-    flight 解读）。</li>
+    ForexSettlement、BopFlows（季度经常账户）、HotMoneyResidual（月频剩余法）、
+    BopErrorsOmissions（独立的季度净误差与遗漏）、CnUsKycBridgeOutflow / CnUsKycBridgeInflow
+    （样本与标记交易所地址之间的方向代理；机构或客户所在地尚未核实，不能直接解释为跨境资本流动）。</li>
   <li><strong>五、对照变量集（controls）</strong>：GlobalUSDStress_simple、
     USYieldCurve、OilStress、GoldPremium、PbcLiquidityOps、AnnualBenchmark。
-    用于残差化分离共同冲击，<em>不进入</em> CSPI 主体 headline。</li>
+    用于残差化分离共同冲击，<em>不进入</em> 宏观环境子指数 headline。</li>
 </ul>
 
-<h3>支柱治理规则（v2.1）</h3>
+<h3>支柱治理规则（v2.5）</h3>
 <p>
-  治理层把"所有 pillar 的监测表"与"可公开解释的 headline 指数"明确分开。
+  以下 headline 指宏观环境子指数及实验层内部合成读数，不代表两个核心目标已通过识别验收。治理层分别管理监测分项与合成资格。
   <code>cspi_index</code> 表保留全部 36 个 pillar 的标准化监测值
   用于诊断 / 回测 /
-  研究；CSPI-v0 headline 经过以下 7 步门控才纳入：
+  研究；CSPI-v0 headline 经过以下门控才纳入：
 </p>
 <ol>
   <li>已废弃支柱（如 StockConnectFlow，因 Wind+HKEX 上游 2024-08 停发）→ 不进 headline；</li>
@@ -101,11 +103,11 @@
   <li><code>n_obs &lt; 30</code> 硬门槛 → 样本不足，降为 event_evidence；</li>
   <li><code>n_obs &lt; min_headline_obs</code>（默认 180）或 <code>n_signals ≤ 1</code> 或
     <code>role == headline_supporting</code> → 以基础权重 × 0.35 的降权进入 headline；</li>
-  <li>其余 → 以完整基础权重进入 headline。</li>
+  <li>超过该分项频率允许的最大陈旧天数 → 权重归零；其余按基础权重纳入。</li>
 </ol>
 <p>
   该规则在每个历史日期都重新评估（<strong>ex-ante 分类</strong>，2026-05-20
-  审查 P0#3 修复）：不会用今天的 n_obs 反推过去的状态。
+  审查 P0#3 修复）：不会用今天的 n_obs 反推过去的状态。网站与内部诊断调用同一合成函数。
 </p>
 
 <h3>残差化诊断（CSPI-v1 原型）</h3>
@@ -122,37 +124,23 @@
 
 <h3>标准化与合成</h3>
 <p>
-  当前公开运行版为 <code>CSPI-v0</code>。
-  <strong>第一步是按序列声明的平稳性变换</strong>（2026-08-30 起）：
-  随所测市场规模一起增长的<strong>存量</strong>序列先转成
-  <strong>对数增长率</strong>再标准化——港离岸人民币存款余额、
-  全球美元稳定币流通市值均取相邻观测的对数增速。
-  这是因为对趋势性存量做扩窗 z，得到的是「今天在自身历史里的位置」而不是
-  「今天有多大压力」——修正前这两根支柱的 z 在近两年分别 100% 为负、100% 为正，
-  实际起的是常数水平位移的作用；改用增长率后，
-  港存款支柱的一阶差分/水平标准差比由 0.176 升至 <strong>1.441</strong>
-  （白噪声约 1.414）、近两年正值占比由 100% 回到 <strong>52%</strong>。
-  存款余额的月度环比仍含春节/年末季节性（未做季节调整），
-  这是一个有界的已知局限——它替换掉的水平趋势是无界的。
-  <strong>价格、利率、利差保留水平口径</strong>：汇率水平本身携带贬值压力信息
-  （7.3 与 6.4 不是同一个陈述），利差经济上是价差；
-  但也如实声明——这些序列的扩窗 z 仍含趋势成分，是否改口径属独立的方法学决策。
+  首先按序列声明进行变换。香港离岸人民币存款总额、全球美元稳定币合计市值使用相邻观测对数增长率；
+  价格、利率与价差目前保留水平。增长率口径仍需检查季节性，水平序列仍需检验平稳性，不能用标准化替代这些检验。
 </p>
 <p>
-  第二步，每个 pillar 内部对（变换后的）底层信号做
-  <strong>expanding-window z-score 标准化</strong>
-  （2026-05-20 审查 P0#1 修复：每个观察 t 的 mu / sigma / 1-99 percentile
-  仅用 [t_0, t] 区间，<em>不</em>包含未来信息；这是 IMF FSI、Hatzius FCI、
-  ECB CISS 等公开金融压力指数的标准做法，可保证历史 z 不随今日数据变化）。
-  pillar 内多源信号以 <code>equal_weighted_v0</code> 聚合为 <code>composite_z</code>，
-  且自 2026-08-30 起在 pillar 的日期网格上做 <strong>as-of 对齐</strong>：
-  取每个成分「当天或之前最近一次」观测（严格后视，不引入前视），
-  并在陈旧度超过按数据发布节奏派生的上限后把该成分剔除。
-  此前按精确日期分组，成分会随发布日历跳进跳出，支柱等于逐日更换篮子。
-  跨 pillar headline 序列再做<strong> forward-fill 跨频率拼接</strong>：
-  日频、月频、季频支柱的最新 z 沿日历前推到下一个观察日，避免低频支柱
-  在月末当日"突然入分母"造成 headline 尖峰。
+  然后在扩展窗口内计算标准化读数，均值、标准差与截尾边界只使用当前及更早观测。
+  该约束针对同一数据版本；上游修订、口径变化和固定参考权重仍可能改变重算历史。
+  分项内部按当天或之前的最近有效成分进行对齐，并在超过成分允许的陈旧期限后剔除；按声明方向等权聚合成分。
 </p>
+<p>
+  跨分项合成同样采用向前携带最近观测的方式，并按各分项发布频率设定最大陈旧期限。
+  基础权重先按信息组划分，再按登记的参考逆波动权重分配到组内；样本量和信号数决定质量折扣。
+  缺项、过期或降权后，信息组的实际份额可能不相等；该方法不等同于使用完整协方差矩阵的风险平价。
+  网站和内部诊断使用同一合成函数，并只读取所选指数计算方法。
+</p>
+
+<h3>发布日期与回测边界</h3>
+<p>当前以观测日期进行滞后筛选；月季频官方数据的首次发布日期与后续修订版本尚未完整入库。后视对齐不等于按当时真实可获得的数据回测，不能据此声称无发布滞后偏差。</p>
 
 <h3>事件验证</h3>
 <p>
@@ -181,12 +169,10 @@
     （公开节点 + Bitquery 等可订阅源）、官方与监管公开数据；</li>
   <li><strong>合成方法</strong>：<em>平稳性变换</em>（按序列声明 level / dlog /
     同比，见下）→ z-score <em>扩窗</em>标准化（expanding，仅用 t 时点及之前数据，
-    历史 z 不随新数据变化）→ 层级风险平价权重（每个信息组等权，<em>组内按逆波动</em>）；
+    同一数据版本下不引入未来观测）→ 信息组基础权重（<em>组内按参考逆波动</em>）→ 质量与新鲜度门控；
     另有动态因子提取（诊断用）；</li>
-  <li><strong>验证标准</strong>：脱锚事件、监管事件、OTC 溢价异常、
-    CNH-CNY 价差波动、跨境桥接流量突变等事件窗口的可解释响应；</li>
-  <li><strong>残差化步骤</strong>：先以 VIX、DXY、加密市场总市值、
-    TED 利差等做投影，对残差再做因子提取，分离渗透特定信息。</li>
+  <li><strong>待完成验证</strong>：独立标签校准、事件窗口与 placebo 检验；当前不能据此宣称完整识别已成立。</li>
+  <li><strong>残差化诊断</strong>：对已登记的五项非年频对照变量作 OLS 投影；该诊断不替代公开主指数，也不自动证明中国特定识别。</li>
 </ul>
 <p><strong>不公开（作为知识产权与研究有效性保护内容）：</strong></p>
 <ul>
@@ -196,7 +182,7 @@
 </ul>
 <p class="note-small">
 不公开的学术理由：识别参数一旦公开会被对抗性绕过，导致研究有效性退化；
-公开变量类别、来源类型与合成方法已足以支持外部检验与方法学复现。
+公开的变量类别、来源类型与合成方法便于口径核对；完整数值复现仍需相应原始数据、版本档案和受控研究材料。
 </p>
 
 
@@ -204,7 +190,7 @@
 <ol>
   <li><strong>内部版</strong>：精确 z + 原始指标，仅本地。</li>
   <li><strong>合作研究版</strong>：脱标签、加噪、按需共享。</li>
-  <li><strong>学术发布版（本网站）</strong>：滞后 7 天 + ±5% 噪声 + 5 分位离散化。</li>
+  <li><strong>学术发布版（本网站）</strong>：至少滞后 7 天，默认使用标准差 5% 的高斯乘法噪声（并非 ±5% 的硬范围），再作分位离散化。图表仅从公开分位绘制。</li>
 </ol>
 
 <h3>平台功能边界</h3>
@@ -214,20 +200,20 @@
 
 <h3>方法学版本</h3>
 <p>
-  当前方法学版本：<code>v2.1</code>
-  （2026-06-29）。
-  当前指数实现：<code>CSPI-v0</code>
-  （Equal-weighted monitoring index (mature-macro headline)）。
-  标准化 pillar 监测原型；对外发布的主指数（headline）由通过支柱治理规则的成熟宏观层非控制变量合成；链上中国归因研究层与之并行报告。整体不解释为资本流动规模的结构性估计。
+  当前方法学版本：<code>v2.5</code>
+  （2026-10-11）。
+  当前宏观环境子指数实现：<code>CSPI-v0</code>
+  （Hierarchical inverse-volatility monitoring index (mature-macro headline)）。
+  宏观环境子指数由通过治理门控的宏观背景分项合成；链上归因实验层单列，两者均不替代渗透程度或跨境资金流向估计。
 </p>
 <p class="note-small">
-  版本说明：v2.0 review alignment: mature_macro remains the published headline; experimental_on_chain is reported separately, kept out of the headline, and only moves above Low confidence when independent address-backed label evidence supports calibration. Weighting uses principled layer/group equal-risk rules; ChineseScore remains an ordinal ranking, not P(China).
+  版本说明：v2.5 official-source monitoring: reviewed HKMA and SAFE observations retain units, statistical periods, raw-source hashes and version availability; unknown release times remain unknown. Bounded chain collection is retained as an independent audit sample, not whole-chain coverage or new attribution truth. Institutional residence is distinct from wallet control; verified finalized headers recover missing ETH dates. Missing KYC and treasury collection days remain missing; treasury transfers are wallet-flow proxies. BTC conversion requires a valid dated price. Resident evidence, score coverage and observed stablecoin samples are reported separately. mature_macro is a pressure-monitoring prototype; expired pillars are excluded using cadence limits. Fixed reference inverse-volatility weights and revised data produce retrospective historical estimates, not real-time vintage backtests. On-chain attribution remains an uncalibrated research layer; input coverage does not establish a national penetration rate.
 </p>
 
 <footer>
   <p class="footer-notice">本平台输出仅用于学术研究与方法学展示，不构成对任何具体主体的监测、监管建议或投资建议。所有链上识别均以公开地址聚类与启发式为基础，以聚合统计指标为单位，不公开任何单一主体级别的判定。</p>
-  <p>数据快照：2026-08-23（较内部数据滞后 7 天） ·
-    已按学术发布规约施加 ±5% 噪声 + 5 分位离散化（§12.6 三轨发布）</p>
+  <p>发布截止日：2026-10-21（至少滞后 7 天；实际观测日见各分项） ·
+    公开读数经过乘法加噪与分位离散化；趋势图仅使用公开分位</p>
   <p>CSPI Research · 独立学术研究项目 ·
     代码私有 · 数据为研究用途，不构成投资、交易、监管或法律建议</p>
 </footer>
