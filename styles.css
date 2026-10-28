@@ -548,12 +548,23 @@ footer .footer-notice {
 .target-card { background:#fff; border:1px solid #bbccdf; border-top:5px solid var(--accent); border-radius:12px; padding:24px; box-shadow:0 4px 16px rgba(13,58,120,.05); }
 .target-kicker { color:var(--muted); font-size:12px; letter-spacing:1px; }
 .target-card h3 { font-size:25px; color:var(--accent); margin:5px 0 14px; }
-.target-state { display:inline-block; background:#fff2d4; color:#795017; border-radius:5px; font-size:14px; font-weight:600; padding:5px 10px; }
+.target-state { display:inline-block; background:#eaf1fa; color:#174b80; border-radius:5px; font-size:14px; font-weight:600; padding:5px 10px; }
 .target-definition { margin:16px 0 12px; font-size:14px; }
 .target-card h4 { font-size:13px; margin:14px 0 6px; }
 .target-card ul { padding-left:20px; margin:0; color:#505c69; font-size:13px; }
 .target-card li { margin:5px 0; }
 .target-estimate { border-top:1px solid var(--border-soft); padding-top:12px; margin:16px 0 0; color:var(--muted); font-size:12px; }
+.inference-panel { margin:24px 0; padding:24px; border:1px solid var(--border); border-radius:12px; background:#fff; }
+.inference-panel h2 { margin:0 0 8px; font-size:22px; }
+.inference-summary { margin:0; color:var(--muted); font-size:14px; }
+.inference-stages { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; list-style:none; padding:0; margin:20px 0 12px; }
+.inference-stage { min-width:0; padding:18px; border:1px solid var(--border-soft); border-radius:8px; background:#f8fafc; }
+.inference-stage h3 { margin:0 0 10px; font-size:17px; }
+.stage-number { display:block; color:var(--muted); font-size:12px; margin-bottom:8px; }
+.stage-state { color:#795017; font-size:13px; font-weight:600; }
+.inference-stage[data-status="experimental_scores_available"] .stage-state { color:#174b80; }
+.inference-stage p { font-size:13px; color:var(--muted); line-height:1.7; margin:10px 0 0; }
+.inference-panel .inference-footnote { margin:0; font-size:12px; color:var(--muted); }
 .construction-panel { background:#fff; border:1px solid var(--border); border-radius:12px; padding:24px; margin:28px 0; }
 .construction-panel h2 { font-size:22px; margin:0 0 6px; }
 .construction-panel > p { font-size:13px; color:var(--muted); margin:6px 0 16px; }
@@ -625,3 +636,5 @@ footer .footer-notice {
 }
 @media(max-width:340px) { .status-grid { grid-template-columns:1fr; } }
 a:focus-visible, summary:focus-visible { outline:3px solid #2c7bb6; outline-offset:4px; }
+@media(max-width:960px) { .inference-stages { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:520px) { .inference-stages { grid-template-columns:1fr; } .inference-panel { padding:20px 16px; } }

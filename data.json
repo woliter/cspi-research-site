@@ -14,9 +14,9 @@
         "status": "not_identified",
         "published_estimate": null,
         "blockers": [
-          "内地居民与机构的地域归属缺少独立核验",
-          "内地可比使用总体与分母不完整",
-          "交易所关联及全球样本活动份额不能替代内地实际使用渗透率"
+          "归属行为模型的独立验证与概率校准仍需完善",
+          "内地可比使用总体、分母与样本代表性不完整",
+          "需将归属推断及采集覆盖的不确定性纳入渗透率估计"
         ]
       },
       {
@@ -26,12 +26,47 @@
         "status": "not_identified",
         "published_estimate": null,
         "blockers": [
-          "双方内地或境外归属与客户居住地未核实，未知不能默认境外",
+          "两端归属可采用经独立验证和校准的概率推断；当前尚未具备该证据，未知不能默认境外",
           "内部划转与跨链重复未完整排除",
-          "链上地址边界转移不等于内地居民与机构的跨境资金流动"
+          "需检验方向估计对归属误差及样本覆盖的敏感性"
         ]
       }
     ],
+    "inference_progress": {
+      "approach": "behavioral_probabilistic_inference",
+      "summary": "以行为特征与网络关系研究归属倾向，允许不确定性，不要求逐地址100%确证。独立参照用于检验推断误差；研究评分、经校准概率和总体估计分别验证。",
+      "score_date": "2026-10-11",
+      "stages": [
+        {
+          "key": "behavioral_model",
+          "label": "行为模型",
+          "status": "experimental_scores_available",
+          "status_label": "已有实验评分",
+          "detail": "发布截止日前已有生产模型的实验评分记录，可用于研究关联强弱；有评分不等于归属已确认、识别有效或概率已校准。"
+        },
+        {
+          "key": "independent_validation",
+          "label": "独立验证",
+          "status": "evidence_incomplete",
+          "status_label": "独立验证证据不足",
+          "detail": "尚无满足完整要求并绑定数据、标签与代码版本的独立验证结论；需按实体和来源留出，检验推断误差与可评分覆盖。"
+        },
+        {
+          "key": "probability_calibration",
+          "label": "概率校准",
+          "status": "uncalibrated",
+          "status_label": "尚未完成校准",
+          "detail": "研究评分尚不能直接解释为归属概率；需用独立参照检验概率校准与误差，设置判定阈值不构成校准证据。"
+        },
+        {
+          "key": "population_inference",
+          "label": "总体外推",
+          "status": "not_supported",
+          "status_label": "尚不支持全国外推",
+          "detail": "样本代表性、总体分母与交易去重仍需验证；归属推断的不确定性也需传递到份额和流向估计。"
+        }
+      ]
+    },
     "coverage_scope": "registered public headline inputs; coverage is not scientific validation",
     "macro": {
       "status": "monitoring_prototype",
@@ -396,7 +431,7 @@
     ],
     "limitations": [
       "输入覆盖率不代表模型准确率或完整指数验收通过。",
-      "内地居民与机构归属仍需独立地域证据、阈值校准与外部验证；相关交易所地址不能代替居民归属。",
+      "行为评分需经独立参照验证与概率校准；不要求逐地址确定归属，相关交易所地址也不能直接代替居民归属。",
       "按观测日期筛选；尚无完整发布时点档案，不能视为实时回测结果。",
       "本版历史分位随新增样本可能变化。"
     ]
@@ -409,9 +444,9 @@
       "status": "not_identified",
       "published_estimate": null,
       "blockers": [
-        "内地居民与机构的地域归属缺少独立核验",
-        "内地可比使用总体与分母不完整",
-        "交易所关联及全球样本活动份额不能替代内地实际使用渗透率"
+        "归属行为模型的独立验证与概率校准仍需完善",
+        "内地可比使用总体、分母与样本代表性不完整",
+        "需将归属推断及采集覆盖的不确定性纳入渗透率估计"
       ]
     },
     {
@@ -421,12 +456,47 @@
       "status": "not_identified",
       "published_estimate": null,
       "blockers": [
-        "双方内地或境外归属与客户居住地未核实，未知不能默认境外",
+        "两端归属可采用经独立验证和校准的概率推断；当前尚未具备该证据，未知不能默认境外",
         "内部划转与跨链重复未完整排除",
-        "链上地址边界转移不等于内地居民与机构的跨境资金流动"
+        "需检验方向估计对归属误差及样本覆盖的敏感性"
       ]
     }
   ],
+  "inference_progress": {
+    "approach": "behavioral_probabilistic_inference",
+    "summary": "以行为特征与网络关系研究归属倾向，允许不确定性，不要求逐地址100%确证。独立参照用于检验推断误差；研究评分、经校准概率和总体估计分别验证。",
+    "score_date": "2026-10-11",
+    "stages": [
+      {
+        "key": "behavioral_model",
+        "label": "行为模型",
+        "status": "experimental_scores_available",
+        "status_label": "已有实验评分",
+        "detail": "发布截止日前已有生产模型的实验评分记录，可用于研究关联强弱；有评分不等于归属已确认、识别有效或概率已校准。"
+      },
+      {
+        "key": "independent_validation",
+        "label": "独立验证",
+        "status": "evidence_incomplete",
+        "status_label": "独立验证证据不足",
+        "detail": "尚无满足完整要求并绑定数据、标签与代码版本的独立验证结论；需按实体和来源留出，检验推断误差与可评分覆盖。"
+      },
+      {
+        "key": "probability_calibration",
+        "label": "概率校准",
+        "status": "uncalibrated",
+        "status_label": "尚未完成校准",
+        "detail": "研究评分尚不能直接解释为归属概率；需用独立参照检验概率校准与误差，设置判定阈值不构成校准证据。"
+      },
+      {
+        "key": "population_inference",
+        "label": "总体外推",
+        "status": "not_supported",
+        "status_label": "尚不支持全国外推",
+        "detail": "样本代表性、总体分母与交易去重仍需验证；归属推断的不确定性也需传递到份额和流向估计。"
+      }
+    ]
+  },
   "construction_evidence": {
     "schema_version": 1,
     "as_of": "2026-10-21",
@@ -760,7 +830,7 @@
       }
     }
   },
-  "generated_at_utc": "2026-10-28T01:23:04Z",
+  "generated_at_utc": "2026-10-28T04:48:30Z",
   "methodology_version": "v2.5",
   "index_version": "CSPI-v0",
   "index_method": "Hierarchical inverse-volatility monitoring index (mature-macro headline)",
